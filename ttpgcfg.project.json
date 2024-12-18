@@ -1,0 +1,10 @@
+{
+  "name": "ahoy-ttpg",
+  "slug": "ahoy-ttpg",
+  "version": "0.0.1",
+  "transpile": true,
+  "guid": {
+    "dev": "A32031149FDC4607B7FF7A0A8D9E5548",
+    "prd": "A922466FAB404CA188F15B551D993C6A"
+  }
+}
