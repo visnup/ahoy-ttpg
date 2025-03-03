@@ -40,7 +40,10 @@
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
-			"FlipValidity": 0
+			"FlipValidity": 0,
+			"Tags": [
+				"wealth"
+			]
 		}
 	],
 	"ZoomViewDirection":

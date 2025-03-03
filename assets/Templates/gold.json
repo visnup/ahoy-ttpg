@@ -59,7 +59,7 @@
 	"MirrorBack": true,
 	"EmissiveFront": false,
 	"Model": "gold.png",
-	"ShapeAccuracy": 10,
+	"ShapeAccuracy": 8,
 	"ConvexCollision": true,
 	"Indices": [ 0 ],
 	"CardNames":
