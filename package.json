@@ -1,11 +1,13 @@
 {
   "name": "ahoy-ttpg",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "setup": "ttpg-scripts setup",
     "dev": "ttpg-scripts dev",
     "clean": "ttpg-scripts clean",
     "reset": "ttpg-scripts reset",
+    "prebuild": "tsx assets/States/quantize.ts",
     "build": "ttpg-scripts build",
     "purge": "ttpg-scripts purge",
     "libpack": "ttpg-scripts libpack",
@@ -20,8 +22,10 @@
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@tabletop-playground/api": "^0.41.0",
+    "@types/node": "^22.13.8",
     "eslint": "^9.17.0",
     "prettier": "^3.4.2",
+    "tsx": "^4.19.3",
     "ttpg-scripts": "^1.5.0",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.1"
