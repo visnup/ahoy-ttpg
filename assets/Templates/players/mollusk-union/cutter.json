@@ -1,0 +1,75 @@
+{
+	"Type": "Generic",
+	"GUID": "ED42917F6B49EFC0115F0AB93E6D84A5",
+	"Name": "cutter",
+	"Metadata": "",
+	"CollisionType": "Regular",
+	"Friction": 0.7,
+	"Restitution": 0.3,
+	"Density": 1,
+	"SurfaceType": "Wood",
+	"Roughness": 1,
+	"Metallic": 0,
+	"PrimaryColor":
+	{
+		"R": 250,
+		"G": 205,
+		"B": 1
+	},
+	"SecondaryColor":
+	{
+		"R": 0,
+		"G": 0,
+		"B": 0
+	},
+	"Flippable": false,
+	"AutoStraighten": false,
+	"ShouldSnap": true,
+	"ScriptName": "",
+	"Blueprint": "",
+	"Models": [
+		{
+			"Model": "players/mollusk-union/cutter.png",
+			"ShapeAccuracy": 10,
+			"Offset":
+			{
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			},
+			"Scale":
+			{
+				"X": 2.879999914500309,
+				"Y": 2.289999932015871,
+				"Z": 0.96999997120322912
+			},
+			"Rotation":
+			{
+				"X": 0,
+				"Y": 90,
+				"Z": 0
+			},
+			"Texture": "players/mollusk-union/cutter.png",
+			"NormalMap": "",
+			"ExtraMap": "Texture2D'/Game/Textures/T_BlackMap.T_BlackMap'",
+			"ExtraMap2": "",
+			"IsTransparent": false,
+			"CastShadow": true,
+			"IsTwoSided": false,
+			"UseOverrides": true,
+			"SurfaceType": "Plastic"
+		}
+	],
+	"Collision": [],
+	"Lights": [],
+	"SnapPointsGlobal": false,
+	"SnapPoints": [],
+	"ZoomViewDirection":
+	{
+		"X": 0,
+		"Y": 0,
+		"Z": 0
+	},
+	"GroundAccessibility": "Nothing",
+	"Tags": []
+}
