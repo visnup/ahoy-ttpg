@@ -39,7 +39,9 @@
 		"Z": 0
 	},
 	"GroundAccessibility": "Nothing",
-	"Tags": [],
+	"Tags": [
+		"damage"
+	],
 	"FrontTexture": "damage.jpg",
 	"BackTexture": "",
 	"HiddenTexture": "",

@@ -12,9 +12,9 @@
 	"Metallic": 0,
 	"PrimaryColor":
 	{
-		"R": 2,
-		"G": 125,
-		"B": 177
+		"R": 68,
+		"G": 157,
+		"B": 215
 	},
 	"SecondaryColor":
 	{
@@ -70,7 +70,9 @@
 		"Z": 0
 	},
 	"GroundAccessibility": "Nothing",
-	"Tags": [],
+	"Tags": [
+		"wealth"
+	],
 	"Faces": [
 		{
 			"X": 0,

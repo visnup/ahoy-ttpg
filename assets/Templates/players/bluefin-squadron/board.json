@@ -62,7 +62,176 @@
 	"Collision": [],
 	"Lights": [],
 	"SnapPointsGlobal": false,
-	"SnapPoints": [],
+	"SnapPoints": [
+		{
+			"X": 5.0999999999999996,
+			"Y": -10.1,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": -8.1999999999999993,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": -6.4000000000000004,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": -4.5,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": -2.0499999999999998,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": -0.23999999999999999,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": 2.75,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": -10.050000000000001,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": -8.1999999999999993,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": -4.9299999999999997,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": -0.92000000000000004,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": 2.75,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
+		}
+	],
 	"ZoomViewDirection":
 	{
 		"X": 0,

@@ -31,7 +31,18 @@
 	"Collision": [],
 	"Lights": [],
 	"SnapPointsGlobal": false,
-	"SnapPoints": [],
+	"SnapPoints": [
+		{
+			"X": 0,
+			"Y": 0,
+			"Z": -1,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0
+		}
+	],
 	"ZoomViewDirection":
 	{
 		"X": 0,
@@ -39,7 +50,9 @@
 		"Z": 0
 	},
 	"GroundAccessibility": "Nothing",
-	"Tags": [],
+	"Tags": [
+		"wealth"
+	],
 	"FrontTexture": "regions.jpg",
 	"BackTexture": "regions-back.jpg",
 	"HiddenTexture": "",

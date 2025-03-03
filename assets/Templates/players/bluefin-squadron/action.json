@@ -70,7 +70,9 @@
 		"Z": 0
 	},
 	"GroundAccessibility": "Nothing",
-	"Tags": [],
+	"Tags": [
+		"action"
+	],
 	"Faces": [
 		{
 			"X": 0,
