@@ -1,16 +1,11 @@
-/node_modules
+.DS_Store
+/assets/Thumbnails/
+/node_modules/
 
 # production
-
 /build
 /lib
 
 # local build for development
-
 /dev
-
-# misc
-
-.DS_Store
-
 ttpgcfg.local.json

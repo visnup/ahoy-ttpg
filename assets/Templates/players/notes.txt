@@ -1,0 +1,14 @@
+colors
+------
+bluefin squadron
+smuggler red
+mollusk union
+smuggler white #ffffff
+
+dimensions
+----------
+die 1.4x1.4x1.4
+board 14x23x0.2
+fame 1.3x1.3x0.2
+cards 8.8x6.3x0.05
+figures z=0.97
