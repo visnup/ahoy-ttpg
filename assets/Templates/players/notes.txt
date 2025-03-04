@@ -1,9 +1,9 @@
 colors
 ------
-bluefin squadron
-smuggler red
-mollusk union
-smuggler white #ffffff
+bluefin squadron 15284C
+smuggler red EA0A2A
+mollusk union FACD01
+smuggler white FFFFFF
 
 dimensions
 ----------

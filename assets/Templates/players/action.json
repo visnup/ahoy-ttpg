@@ -12,15 +12,15 @@
 	"Metallic": 0,
 	"PrimaryColor":
 	{
-		"R": 21,
-		"G": 40,
-		"B": 76
-	},
-	"SecondaryColor":
-	{
 		"R": 255,
 		"G": 255,
 		"B": 255
+	},
+	"SecondaryColor":
+	{
+		"R": 0,
+		"G": 0,
+		"B": 0
 	},
 	"Flippable": false,
 	"AutoStraighten": false,
