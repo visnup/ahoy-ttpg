@@ -174,6 +174,19 @@
 				"action",
 				"damage"
 			]
+		},
+		{
+			"X": -4,
+			"Y": 7.9470000000000001,
+			"Z": 0,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"market"
+			]
 		}
 	],
 	"ZoomViewDirection":

@@ -60,8 +60,8 @@
 		"liftOverRegular": true,
 		"gravityMultiplier": 1,
 		"slotIds": [
-			"000286efea3a41b79727001b2c081a96",
 			"",
+			"000286efea3a41b79727001b2c081a96",
 			"",
 			"",
 			"",
@@ -152,25 +152,101 @@
 		"20"
 	],
 	"customPlayerColors": [
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
+		{
+			"r": 21,
+			"g": 40,
+			"b": 76
+		},
+		{
+			"r": 234,
+			"g": 10,
+			"b": 42
+		},
+		{
+			"r": 250,
+			"g": 205,
+			"b": 1
+		},
+		{
+			"r": 255,
+			"g": 255,
+			"b": 255
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
+		{
+			"r": 0,
+			"g": 0,
+			"b": 0
+		},
 		false
 	],
 	"lighting": {
@@ -324,6 +400,132 @@
 			"uniqueId": "rrh",
 			"drawingLines": [],
 			"objectTags": [],
+			"objectGroupId": -1,
+			"ownerIndex": -1,
+			"lightsOn": true,
+			"bCanBeDamaged": false
+		},
+		{
+			"objectType": "Dice",
+			"transform": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation": {
+					"x": -26.204,
+					"y": -7.586,
+					"z": 87.522
+				},
+				"scale3D": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"simulatingPhysics": true,
+			"primaryColor": {
+				"b": 42,
+				"g": 10,
+				"r": 234,
+				"a": 255
+			},
+			"secondaryColor": {
+				"b": 255,
+				"g": 255,
+				"r": 255,
+				"a": 255
+			},
+			"metallic": 0,
+			"roughness": 0.2,
+			"friction": 0.7,
+			"restitution": 0.5,
+			"density": 1,
+			"surfaceType": "SurfaceType1",
+			"objectName": "",
+			"objectDescription": "",
+			"collisionType": "CB_Regular",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
+			"shouldSnap": true,
+			"previousPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
+			"objectScriptName": "",
+			"persistentData": "",
+			"persistentKeyData": {},
+			"uniqueId": "e1n",
+			"drawingLines": [],
+			"objectTags": [
+				"action"
+			],
+			"objectGroupId": -1,
+			"ownerIndex": -1,
+			"lightsOn": true,
+			"bCanBeDamaged": false
+		},
+		{
+			"objectType": "Dice",
+			"transform": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation": {
+					"x": -26.908,
+					"y": -5.416,
+					"z": 87.522
+				},
+				"scale3D": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"simulatingPhysics": true,
+			"primaryColor": {
+				"b": 42,
+				"g": 10,
+				"r": 234,
+				"a": 255
+			},
+			"secondaryColor": {
+				"b": 255,
+				"g": 255,
+				"r": 255,
+				"a": 255
+			},
+			"metallic": 0,
+			"roughness": 0.2,
+			"friction": 0.7,
+			"restitution": 0.5,
+			"density": 1,
+			"surfaceType": "SurfaceType1",
+			"objectName": "",
+			"objectDescription": "",
+			"collisionType": "CB_Regular",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
+			"shouldSnap": true,
+			"previousPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
+			"objectScriptName": "",
+			"persistentData": "",
+			"persistentKeyData": {},
+			"uniqueId": "q66",
+			"drawingLines": [],
+			"objectTags": [
+				"action"
+			],
 			"objectGroupId": -1,
 			"ownerIndex": -1,
 			"lightsOn": true,
@@ -570,6 +772,69 @@
 			"bCanBeDamaged": false
 		},
 		{
+			"objectType": "Dice",
+			"transform": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation": {
+					"x": -30.121,
+					"y": -4.602,
+					"z": 87.522
+				},
+				"scale3D": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"simulatingPhysics": true,
+			"primaryColor": {
+				"b": 42,
+				"g": 10,
+				"r": 234,
+				"a": 255
+			},
+			"secondaryColor": {
+				"b": 255,
+				"g": 255,
+				"r": 255,
+				"a": 255
+			},
+			"metallic": 0,
+			"roughness": 0.2,
+			"friction": 0.7,
+			"restitution": 0.5,
+			"density": 1,
+			"surfaceType": "SurfaceType1",
+			"objectName": "",
+			"objectDescription": "",
+			"collisionType": "CB_Regular",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
+			"shouldSnap": true,
+			"previousPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
+			"objectScriptName": "",
+			"persistentData": "",
+			"persistentKeyData": {},
+			"uniqueId": "87g",
+			"drawingLines": [],
+			"objectTags": [
+				"action"
+			],
+			"objectGroupId": -1,
+			"ownerIndex": -1,
+			"lightsOn": true,
+			"bCanBeDamaged": false
+		},
+		{
 			"objectType": "Card",
 			"transform": {
 				"rotation": {
@@ -630,6 +895,69 @@
 			"drawingLines": [],
 			"objectTags": [
 				"fame"
+			],
+			"objectGroupId": -1,
+			"ownerIndex": -1,
+			"lightsOn": true,
+			"bCanBeDamaged": false
+		},
+		{
+			"objectType": "Dice",
+			"transform": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation": {
+					"x": -30.026,
+					"y": -6.875,
+					"z": 87.522
+				},
+				"scale3D": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"simulatingPhysics": true,
+			"primaryColor": {
+				"b": 42,
+				"g": 10,
+				"r": 234,
+				"a": 255
+			},
+			"secondaryColor": {
+				"b": 255,
+				"g": 255,
+				"r": 255,
+				"a": 255
+			},
+			"metallic": 0,
+			"roughness": 0.2,
+			"friction": 0.7,
+			"restitution": 0.5,
+			"density": 1,
+			"surfaceType": "SurfaceType1",
+			"objectName": "",
+			"objectDescription": "",
+			"collisionType": "CB_Regular",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
+			"shouldSnap": true,
+			"previousPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
+			"objectScriptName": "",
+			"persistentData": "",
+			"persistentKeyData": {},
+			"uniqueId": "kjt",
+			"drawingLines": [],
+			"objectTags": [
+				"action"
 			],
 			"objectGroupId": -1,
 			"ownerIndex": -1,
@@ -2109,6 +2437,69 @@
 				"rotation": {
 					"x": 0,
 					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation": {
+					"x": -31.524,
+					"y": 26.22,
+					"z": 87.522
+				},
+				"scale3D": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"simulatingPhysics": true,
+			"primaryColor": {
+				"b": 1,
+				"g": 205,
+				"r": 250,
+				"a": 255
+			},
+			"secondaryColor": {
+				"b": 0,
+				"g": 0,
+				"r": 0,
+				"a": 255
+			},
+			"metallic": 0,
+			"roughness": 0.2,
+			"friction": 0.7,
+			"restitution": 0.5,
+			"density": 1,
+			"surfaceType": "SurfaceType1",
+			"objectName": "",
+			"objectDescription": "",
+			"collisionType": "CB_Regular",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
+			"shouldSnap": true,
+			"previousPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
+			"objectScriptName": "",
+			"persistentData": "",
+			"persistentKeyData": {},
+			"uniqueId": "o0e",
+			"drawingLines": [],
+			"objectTags": [
+				"action"
+			],
+			"objectGroupId": -1,
+			"ownerIndex": -1,
+			"lightsOn": true,
+			"bCanBeDamaged": false
+		},
+		{
+			"objectType": "Dice",
+			"transform": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
 					"z": 0.008,
 					"w": 1
 				},
@@ -2160,69 +2551,6 @@
 			"drawingLines": [],
 			"objectTags": [
 				"wealth"
-			],
-			"objectGroupId": -1,
-			"ownerIndex": -1,
-			"lightsOn": true,
-			"bCanBeDamaged": false
-		},
-		{
-			"objectType": "Dice",
-			"transform": {
-				"rotation": {
-					"x": 0,
-					"y": 0,
-					"z": 0,
-					"w": 1
-				},
-				"translation": {
-					"x": -30.868,
-					"y": 27.233,
-					"z": 87.522
-				},
-				"scale3D": {
-					"x": 1,
-					"y": 1,
-					"z": 1
-				}
-			},
-			"simulatingPhysics": true,
-			"primaryColor": {
-				"b": 1,
-				"g": 205,
-				"r": 250,
-				"a": 255
-			},
-			"secondaryColor": {
-				"b": 0,
-				"g": 0,
-				"r": 0,
-				"a": 255
-			},
-			"metallic": 0,
-			"roughness": 0.2,
-			"friction": 0.7,
-			"restitution": 0.5,
-			"density": 1,
-			"surfaceType": "SurfaceType1",
-			"objectName": "",
-			"objectDescription": "",
-			"collisionType": "CB_Regular",
-			"templateId": "77BDAF9121448C30B7EE27A777DFECA4",
-			"shouldSnap": true,
-			"previousPosition": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			},
-			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
-			"objectScriptName": "",
-			"persistentData": "",
-			"persistentKeyData": {},
-			"uniqueId": "wm9",
-			"drawingLines": [],
-			"objectTags": [
-				"action"
 			],
 			"objectGroupId": -1,
 			"ownerIndex": -1,
@@ -2684,8 +3012,8 @@
 					"w": 1
 				},
 				"translation": {
-					"x": -31.053,
-					"y": 28.931,
+					"x": -31.339,
+					"y": 28.77,
 					"z": 87.522
 				},
 				"scale3D": {
@@ -2716,7 +3044,7 @@
 			"objectName": "",
 			"objectDescription": "",
 			"collisionType": "CB_Regular",
-			"templateId": "77BDAF9121448C30B7EE27A777DFECA4",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
 			"shouldSnap": true,
 			"previousPosition": {
 				"x": 0,
@@ -2727,7 +3055,7 @@
 			"objectScriptName": "",
 			"persistentData": "",
 			"persistentKeyData": {},
-			"uniqueId": "o9y",
+			"uniqueId": "sxh",
 			"drawingLines": [],
 			"objectTags": [
 				"action"
@@ -2810,8 +3138,8 @@
 					"w": 1
 				},
 				"translation": {
-					"x": -30.953,
-					"y": 30.886,
+					"x": -31.246,
+					"y": 30.841,
 					"z": 87.522
 				},
 				"scale3D": {
@@ -2842,7 +3170,7 @@
 			"objectName": "",
 			"objectDescription": "",
 			"collisionType": "CB_Regular",
-			"templateId": "77BDAF9121448C30B7EE27A777DFECA4",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
 			"shouldSnap": true,
 			"previousPosition": {
 				"x": 0,
@@ -2853,7 +3181,7 @@
 			"objectScriptName": "",
 			"persistentData": "",
 			"persistentKeyData": {},
-			"uniqueId": "c1t",
+			"uniqueId": "jrd",
 			"drawingLines": [],
 			"objectTags": [
 				"action"
@@ -2873,8 +3201,8 @@
 					"w": 1
 				},
 				"translation": {
-					"x": -30.851,
-					"y": 33.512,
+					"x": -31.524,
+					"y": 32.874,
 					"z": 87.522
 				},
 				"scale3D": {
@@ -2905,7 +3233,7 @@
 			"objectName": "",
 			"objectDescription": "",
 			"collisionType": "CB_Regular",
-			"templateId": "77BDAF9121448C30B7EE27A777DFECA4",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
 			"shouldSnap": true,
 			"previousPosition": {
 				"x": 0,
@@ -2916,7 +3244,7 @@
 			"objectScriptName": "",
 			"persistentData": "",
 			"persistentKeyData": {},
-			"uniqueId": "q78",
+			"uniqueId": "vh1",
 			"drawingLines": [],
 			"objectTags": [
 				"action"
@@ -3937,6 +4265,69 @@
 			"bCanBeDamaged": false
 		},
 		{
+			"objectType": "Dice",
+			"transform": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation": {
+					"x": -28.585,
+					"y": 65.761,
+					"z": 87.522
+				},
+				"scale3D": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"simulatingPhysics": true,
+			"primaryColor": {
+				"b": 255,
+				"g": 255,
+				"r": 255,
+				"a": 255
+			},
+			"secondaryColor": {
+				"b": 0,
+				"g": 0,
+				"r": 0,
+				"a": 255
+			},
+			"metallic": 0,
+			"roughness": 0.2,
+			"friction": 0.7,
+			"restitution": 0.5,
+			"density": 1,
+			"surfaceType": "SurfaceType1",
+			"objectName": "",
+			"objectDescription": "",
+			"collisionType": "CB_Regular",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
+			"shouldSnap": true,
+			"previousPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
+			"objectScriptName": "",
+			"persistentData": "",
+			"persistentKeyData": {},
+			"uniqueId": "k80",
+			"drawingLines": [],
+			"objectTags": [
+				"action"
+			],
+			"objectGroupId": -1,
+			"ownerIndex": -1,
+			"lightsOn": true,
+			"bCanBeDamaged": false
+		},
+		{
 			"objectType": "DynamicObject",
 			"transform": {
 				"rotation": {
@@ -3992,6 +4383,69 @@
 			"uniqueId": "6b5",
 			"drawingLines": [],
 			"objectTags": [],
+			"objectGroupId": -1,
+			"ownerIndex": -1,
+			"lightsOn": true,
+			"bCanBeDamaged": false
+		},
+		{
+			"objectType": "Dice",
+			"transform": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation": {
+					"x": -31.06,
+					"y": 65.157,
+					"z": 87.522
+				},
+				"scale3D": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"simulatingPhysics": true,
+			"primaryColor": {
+				"b": 255,
+				"g": 255,
+				"r": 255,
+				"a": 255
+			},
+			"secondaryColor": {
+				"b": 0,
+				"g": 0,
+				"r": 0,
+				"a": 255
+			},
+			"metallic": 0,
+			"roughness": 0.2,
+			"friction": 0.7,
+			"restitution": 0.5,
+			"density": 1,
+			"surfaceType": "SurfaceType1",
+			"objectName": "",
+			"objectDescription": "",
+			"collisionType": "CB_Regular",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
+			"shouldSnap": true,
+			"previousPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
+			"objectScriptName": "",
+			"persistentData": "",
+			"persistentKeyData": {},
+			"uniqueId": "9d5",
+			"drawingLines": [],
+			"objectTags": [
+				"action"
+			],
 			"objectGroupId": -1,
 			"ownerIndex": -1,
 			"lightsOn": true,
@@ -4364,6 +4818,69 @@
 			"bCanBeDamaged": false
 		},
 		{
+			"objectType": "Dice",
+			"transform": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"w": 1
+				},
+				"translation": {
+					"x": -27.999,
+					"y": 68.334,
+					"z": 87.522
+				},
+				"scale3D": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"simulatingPhysics": true,
+			"primaryColor": {
+				"b": 255,
+				"g": 255,
+				"r": 255,
+				"a": 255
+			},
+			"secondaryColor": {
+				"b": 0,
+				"g": 0,
+				"r": 0,
+				"a": 255
+			},
+			"metallic": 0,
+			"roughness": 0.2,
+			"friction": 0.7,
+			"restitution": 0.5,
+			"density": 1,
+			"surfaceType": "SurfaceType1",
+			"objectName": "",
+			"objectDescription": "",
+			"collisionType": "CB_Regular",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
+			"shouldSnap": true,
+			"previousPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
+			"objectScriptName": "",
+			"persistentData": "",
+			"persistentKeyData": {},
+			"uniqueId": "0tc",
+			"drawingLines": [],
+			"objectTags": [
+				"action"
+			],
+			"objectGroupId": -1,
+			"ownerIndex": -1,
+			"lightsOn": true,
+			"bCanBeDamaged": false
+		},
+		{
 			"objectType": "DynamicObject",
 			"transform": {
 				"rotation": {
@@ -4419,6 +4936,69 @@
 			"uniqueId": "9bn",
 			"drawingLines": [],
 			"objectTags": [],
+			"objectGroupId": -1,
+			"ownerIndex": -1,
+			"lightsOn": true,
+			"bCanBeDamaged": false
+		},
+		{
+			"objectType": "Dice",
+			"transform": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0.003,
+					"w": 1
+				},
+				"translation": {
+					"x": -30.489,
+					"y": 67.45,
+					"z": 87.522
+				},
+				"scale3D": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			"simulatingPhysics": true,
+			"primaryColor": {
+				"b": 255,
+				"g": 255,
+				"r": 255,
+				"a": 255
+			},
+			"secondaryColor": {
+				"b": 0,
+				"g": 0,
+				"r": 0,
+				"a": 255
+			},
+			"metallic": 0,
+			"roughness": 0.2,
+			"friction": 0.7,
+			"restitution": 0.5,
+			"density": 1,
+			"surfaceType": "SurfaceType1",
+			"objectName": "",
+			"objectDescription": "",
+			"collisionType": "CB_Regular",
+			"templateId": "D3AFC9C59445D790B3A437A515B48423",
+			"shouldSnap": true,
+			"previousPosition": {
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"objectScriptPackage": "A32031149FDC4607B7FF7A0A8D9E5548",
+			"objectScriptName": "",
+			"persistentData": "",
+			"persistentKeyData": {},
+			"uniqueId": "8hx",
+			"drawingLines": [],
+			"objectTags": [
+				"action"
+			],
 			"objectGroupId": -1,
 			"ownerIndex": -1,
 			"lightsOn": true,
