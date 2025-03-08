@@ -59,7 +59,7 @@
 	"MirrorBack": true,
 	"EmissiveFront": false,
 	"Model": "Round",
-	"Indices": [ 0 ],
+	"Indices": [ 0, 1, 2, 3 ],
 	"CardNames":
 	{
 	},

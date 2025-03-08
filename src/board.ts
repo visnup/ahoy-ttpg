@@ -13,33 +13,35 @@ refObject.setup = () => {
   const player = players.find((p) => p.template === refObject.getTemplateId());
   switch (player?.name) {
     case "bluefin-squadron": {
-      // patrols, strongholds, reference
       placeFlagship(player);
       placeDice(5, player);
       const ref = placeDeck(player.reference);
-      ref.takeCards(1)?.setPosition(ref.getPosition().add(x.multiply(7)));
+      const two = ref.takeCards(1)!;
+      two.setPosition(ref.getPosition().add(x.multiply(7)));
+      for (const c of [ref, two]) c.freeze();
+      // patrols, strongholds
       break;
     }
     case "smuggler-red": {
-      // pledges, reference
       placeFlagship(player);
       placeDice(4, player);
       placeDeck(player.reference, true);
+      placeDeck(player.pledge, true, p.add(y.multiply(-10)));
       break;
     }
     case "mollusk-union": {
-      // comrades, plans, cutter, gunship
       placeFlagship(player);
       placeDice(4, player);
       const plans = placeDeck(player.plans);
       plans.shuffle();
+      // comrades, cutter, gunship
       break;
     }
     case "smuggler-white": {
-      // pledges, reference
       placeFlagship(player);
       placeDice(4, player);
       placeDeck(player.reference, true);
+      placeDeck(player.pledge, true, p.add(y.multiply(-10)));
       break;
     }
   }
@@ -71,10 +73,14 @@ refObject.setup = () => {
     }
   }
 
-  function placeDeck(id: string, flip = false) {
+  function placeDeck(
+    id: string,
+    flip = false,
+    position = p.add(x.multiply(16)),
+  ) {
     const deck = world.createObjectFromTemplate(
       id,
-      p.add([0, 0, 2]).add(x.multiply(16)),
+      position.add([0, 0, 1]),
     ) as Card;
     deck.setRotation(refObject.getRotation());
     deck.snapToGround();
