@@ -15,7 +15,7 @@ refObject.setup = (slot: number) => {
       // patrols, strongholds, reference
       placeFlagship("631F8E03FB488C23D1AC3C8270C61C8F");
       placeDice(5, slot);
-      placeDeck("94030539784BE6D3AC575BA051EEC8A5");
+      placeDeck("94030539784BE6D3AC575BA051EEC8A5", true);
       break;
     }
     // red smuggler
@@ -23,7 +23,7 @@ refObject.setup = (slot: number) => {
       // pledges, reference
       placeFlagship("D1FCC096FA45847655DE3B80A7EBDE39");
       placeDice(4, slot);
-      placeDeck("1CD8066C924EBADB2C83F8AEA898CB5B");
+      placeDeck("1CD8066C924EBADB2C83F8AEA898CB5B", true);
       break;
     }
     // mollusk union
@@ -31,7 +31,8 @@ refObject.setup = (slot: number) => {
       // comrades, plans, cutter, gunship
       placeFlagship("05DB99C4744C67CF023531A1AACE80A4");
       placeDice(4, slot);
-      placeDeck("2D101611F44D50794ACA05B19F8C7F11");
+      const plans = placeDeck("2D101611F44D50794ACA05B19F8C7F11");
+      plans.shuffle();
       break;
     }
     // white smuggler
@@ -39,7 +40,7 @@ refObject.setup = (slot: number) => {
       // pledges, reference
       placeFlagship("23D464F20A40E3DA7AC80D9A80A38A20");
       placeDice(4, slot);
-      placeDeck("7BA03F3582432D846DCC009803B41BE3");
+      placeDeck("7BA03F3582432D846DCC009803B41BE3", true);
       break;
     }
   }
@@ -72,12 +73,14 @@ refObject.setup = (slot: number) => {
     }
   }
 
-  function placeDeck(id: string) {
+  function placeDeck(id: string, flip = false) {
     const deck = world.createObjectFromTemplate(
       id,
       p.add([0, 0, 2]).add(x.multiply(16)),
     ) as Card;
     deck.setRotation(refObject.getRotation());
     deck.snapToGround();
+    if (flip) deck.flipOrUpright();
+    return deck;
   }
 };
