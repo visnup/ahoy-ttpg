@@ -1,14 +1,14 @@
-import type { Button, GameObject } from "@tabletop-playground/api";
+import type { Button, Color, GameObject } from "@tabletop-playground/api";
 import {
   refPackageId as _refPackageId,
   Card,
-  Color,
   Dice,
   UIElement,
   Vector,
   world,
 } from "@tabletop-playground/api";
 import { jsxInTTPG, render } from "jsx-in-ttpg";
+import { players } from "./players";
 
 const refPackageId = _refPackageId;
 const origin = new Vector(0, 0, world.getTableHeight() + 0.5);
@@ -21,31 +21,11 @@ type Position = {
   removable?: true;
 };
 const positions: Position[] = [
-  {
-    back: "80BAFE47F441F064D5A344AEE62E71E6", // bluefin squadron
-    template: "300F62A0D44DB4F40DA0E4A328CB3758",
-    color: new Color(0.0824, 0.1569, 0.298, 1),
-  },
-  {
-    back: "87F8C9518F4700BB8DAB9CADE119C764", // red smuggler
-    template: "7A8D72AAA64A2A976DCE2A9602C41680",
-    color: new Color(0.9176, 0.0392, 0.1647, 1),
-    removable: true,
-  },
-  {
-    back: "60466AB1544E5C552EA642AAAE2453E3", // mollusk union
-    template: "19F163665B477FC3B87512BEC2175203",
-    color: new Color(0.9804, 0.8039, 0.0039, 1),
-  },
-  {
-    template: "CD0D5A8D07430CD26FD983914F484812", // fame
-  },
-  {
-    back: "B9279E8BED4C4A7C660D50BAEC63FC22", // white smuggler
-    template: "B0DF59A6A844E2CBF4DF44BE8BE35692",
-    color: new Color(1, 1, 1, 1),
-    removable: true,
-  },
+  { ...players[0] },
+  { ...players[1], removable: true },
+  { ...players[2] },
+  { template: "CD0D5A8D07430CD26FD983914F484812" }, // fame
+  { ...players[3], removable: true },
 ];
 
 export function initialSetup() {
@@ -152,7 +132,7 @@ function setupPieces(button: Button) {
   }
 
   // 3. Seat players
-  for (const [i, p] of positions.filter((p) => p.color).entries()) {
+  for (const p of positions.filter((p) => p.color)) {
     if (p.board?.getTemplateId() === p.template) continue;
     const back = p.board!;
     const board = (p.board = world.createObjectFromTemplate(
@@ -160,7 +140,7 @@ function setupPieces(button: Button) {
       back.getPosition(),
     )!);
     board.setRotation(back.getRotation());
-    if ("setup" in board && typeof board.setup === "function") board.setup(i);
+    if ("setup" in board && typeof board.setup === "function") board.setup();
     back.destroy();
   }
 

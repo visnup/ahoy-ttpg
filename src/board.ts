@@ -1,52 +1,50 @@
-import type { Card, Dice } from "@tabletop-playground/api";
+import type { Card, Color, Dice } from "@tabletop-playground/api";
 import { refObject as _refObject, world } from "@tabletop-playground/api";
+import { players } from "./lib/players";
 
 const refObject = _refObject;
 
 // @ts-expect-error assign
-refObject.setup = (slot: number) => {
+refObject.setup = () => {
   const p = refObject.getPosition();
   const x = refObject.getRotation().compose([0, 90, 0]).toVector();
   const y = refObject.getRotation().toVector();
 
-  switch (refObject.getTemplateId()) {
-    // bluefin squadron
-    case "300F62A0D44DB4F40DA0E4A328CB3758": {
+  const player = players.find((p) => p.template === refObject.getTemplateId());
+  switch (player?.name) {
+    case "bluefin-squadron": {
       // patrols, strongholds, reference
-      placeFlagship("631F8E03FB488C23D1AC3C8270C61C8F");
-      placeDice(5, slot);
-      const ref = placeDeck("94030539784BE6D3AC575BA051EEC8A5");
+      placeFlagship(player);
+      placeDice(5, player);
+      const ref = placeDeck(player.reference);
       ref.takeCards(1)?.setPosition(ref.getPosition().add(x.multiply(7)));
       break;
     }
-    // red smuggler
-    case "7A8D72AAA64A2A976DCE2A9602C41680": {
+    case "smuggler-red": {
       // pledges, reference
-      placeFlagship("D1FCC096FA45847655DE3B80A7EBDE39");
-      placeDice(4, slot);
-      placeDeck("1CD8066C924EBADB2C83F8AEA898CB5B", true);
+      placeFlagship(player);
+      placeDice(4, player);
+      placeDeck(player.reference, true);
       break;
     }
-    // mollusk union
-    case "19F163665B477FC3B87512BEC2175203": {
+    case "mollusk-union": {
       // comrades, plans, cutter, gunship
-      placeFlagship("05DB99C4744C67CF023531A1AACE80A4");
-      placeDice(4, slot);
-      const plans = placeDeck("2D101611F44D50794ACA05B19F8C7F11");
+      placeFlagship(player);
+      placeDice(4, player);
+      const plans = placeDeck(player.plans);
       plans.shuffle();
       break;
     }
-    // white smuggler
-    case "B0DF59A6A844E2CBF4DF44BE8BE35692": {
+    case "smuggler-white": {
       // pledges, reference
-      placeFlagship("23D464F20A40E3DA7AC80D9A80A38A20");
-      placeDice(4, slot);
-      placeDeck("7BA03F3582432D846DCC009803B41BE3", true);
+      placeFlagship(player);
+      placeDice(4, player);
+      placeDeck(player.reference, true);
       break;
     }
   }
 
-  function placeFlagship(id: string) {
+  function placeFlagship({ flagship: id }: { flagship: string }) {
     const flagship = world.createObjectFromTemplate(
       id,
       p.add([0, 0, 5]).add(x.multiply(-9)).add(y.multiply(9)),
@@ -56,8 +54,7 @@ refObject.setup = (slot: number) => {
     return flagship;
   }
 
-  function placeDice(n: number, slot: number) {
-    const color = world.getSlotColor(slot);
+  function placeDice(n: number, { color }: { color: Color }) {
     for (let i = 0; i < n; i++) {
       const dice = world.createObjectFromTemplate(
         "D3AFC9C59445D790B3A437A515B48423",
