@@ -15,7 +15,8 @@ refObject.setup = (slot: number) => {
       // patrols, strongholds, reference
       placeFlagship("631F8E03FB488C23D1AC3C8270C61C8F");
       placeDice(5, slot);
-      placeDeck("94030539784BE6D3AC575BA051EEC8A5", true);
+      const ref = placeDeck("94030539784BE6D3AC575BA051EEC8A5");
+      ref.takeCards(1)?.setPosition(ref.getPosition().add(x.multiply(7)));
       break;
     }
     // red smuggler
