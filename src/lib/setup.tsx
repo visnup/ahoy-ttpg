@@ -188,10 +188,11 @@ function setupPieces(button: Button) {
   ) as Card;
   market.setRotation(fame.getRotation());
   market.snapToGround();
-  for (let suit = 0; suit < 6; suit++)
-    market
-      .takeCards(1, false, suit * 4 + Math.floor(Math.random() * 5))
-      ?.destroy();
+  if (positions.length < 5)
+    for (let suit = 0; suit < 6; suit++)
+      market
+        .takeCards(1, false, suit * 4 + Math.floor(Math.random() * 5))
+        ?.destroy();
   market.shuffle();
 
   // 8. Deal market
