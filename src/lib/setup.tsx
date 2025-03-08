@@ -151,6 +151,19 @@ function setupPieces(button: Button) {
     }
   }
 
+  // 3. Seat players
+  for (const p of positions) {
+    if (p.board?.getTemplateId() === p.template) continue;
+    const back = p.board!;
+    const board = (p.board = world.createObjectFromTemplate(
+      p.template,
+      back.getPosition(),
+    )!);
+    board.setRotation(back.getRotation());
+    if ("setup" in board && typeof board.setup === "function") board.setup();
+    back.destroy();
+  }
+
   // 4. Prepare region stack
   const regions = world.createObjectFromTemplate(
     "59DF467DB944A6DB31BDC9BE446B910B",
@@ -208,18 +221,6 @@ function setupPieces(button: Button) {
   }
 
   // 9. Mark fame track
-
-  // Flip boards
-  for (const p of positions) {
-    if (p.board?.getTemplateId() === p.template) continue;
-    const back = p.board!;
-    const board = (p.board = world.createObjectFromTemplate(
-      p.template,
-      back.getPosition(),
-    )!);
-    board.setRotation(back.getRotation());
-    back.destroy();
-  }
 
   // Remove button
   button.getOwningObject()?.removeUI(0);
