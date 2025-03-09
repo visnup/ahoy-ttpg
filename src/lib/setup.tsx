@@ -3,7 +3,6 @@ import {
   refPackageId as _refPackageId,
   Card,
   Dice,
-  Rotator,
   UIElement,
   Vector,
   world,
@@ -103,8 +102,8 @@ function setupPieces(button: Button) {
 
   // 1. Collect shared pieces
   const shared = [
-    ["F5DD8208484E7508A7C1BF8743C9DF8D", 20], // gold
-    ["80E8118F324A3F5C2491FFB2447825C4", 25], // damage
+    ["F5DD8208484E7508A7C1BF8743C9DF8D", 1], // gold
+    ["80E8118F324A3F5C2491FFB2447825C4", 1], // damage
     // ["618F5B66EB4A60801AF271AA0BDFCCF0", 11], // wealth
     ["48F9260EAF4C1C73134B17AC44CCD1E0", 2], // damage
   ] as const;
@@ -112,7 +111,7 @@ function setupPieces(button: Button) {
   const y = fame.getRotation().toVector();
   const aboveFame = fame
     .getPosition()
-    .add([0, 0, 1])
+    .add([0, 0, 5])
     .add(x.multiply(-6))
     .add(y.multiply(10));
   for (const [i, [id, n]] of shared.entries()) {

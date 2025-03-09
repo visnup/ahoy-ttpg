@@ -61,7 +61,7 @@
 	"Model": "gold.png",
 	"ShapeAccuracy": 8,
 	"ConvexCollision": true,
-	"Indices": [ 0 ],
+	"Indices": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 	"CardNames":
 	{
 	},

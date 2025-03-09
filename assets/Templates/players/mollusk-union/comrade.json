@@ -39,7 +39,9 @@
 		"Z": 0
 	},
 	"GroundAccessibility": "Nothing",
-	"Tags": [],
+	"Tags": [
+		"comrade"
+	],
 	"FrontTexture": "players/mollusk-union/comrade.jpg",
 	"BackTexture": "",
 	"HiddenTexture": "",
@@ -59,7 +61,7 @@
 	"MirrorBack": true,
 	"EmissiveFront": false,
 	"Model": "Round",
-	"Indices": [ 0 ],
+	"Indices": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
 	"CardNames":
 	{
 	},

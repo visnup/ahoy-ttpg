@@ -205,6 +205,19 @@
 			"Tags": [
 				"action"
 			]
+		},
+		{
+			"X": -5.6799999999999997,
+			"Y": 10.27,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"comrade"
+			]
 		}
 	],
 	"ZoomViewDirection":
