@@ -1,0 +1,98 @@
+{
+	"Type": "Card Holder",
+	"GUID": "9F6ECAB494436798F7BFB89CD8FCF795",
+	"Name": "holder",
+	"Metadata": "",
+	"CollisionType": "Ground",
+	"Friction": 0.7,
+	"Restitution": 0.3,
+	"Density": 1,
+	"SurfaceType": "Wood",
+	"Roughness": 0.5,
+	"Metallic": 1,
+	"PrimaryColor":
+	{
+		"R": 250,
+		"G": 205,
+		"B": 1
+	},
+	"SecondaryColor":
+	{
+		"R": 20,
+		"G": 20,
+		"B": 20
+	},
+	"Flippable": false,
+	"AutoStraighten": false,
+	"ShouldSnap": true,
+	"ScriptName": "",
+	"Blueprint": "",
+	"Models": [
+		{
+			"Model": "StaticMesh'/Game/Meshes/Basic/Cube.Cube'",
+			"Offset":
+			{
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			},
+			"Scale":
+			{
+				"X": 1.8,
+				"Y": 4.7999990844728311,
+				"Z": 0.039999991774560602
+			},
+			"Rotation":
+			{
+				"X": -0,
+				"Y": 0,
+				"Z": 0
+			},
+			"Texture": "",
+			"NormalMap": "",
+			"ExtraMap": "",
+			"ExtraMap2": "",
+			"IsTransparent": true,
+			"Alpha": 0.1,
+			"CastShadow": false,
+			"IsTwoSided": false,
+			"UseOverrides": false,
+			"Roughness": 0.7,
+			"Metallic": 0,
+			"PrimaryColor":
+			{
+				"R": 0,
+				"G": 0,
+				"B": 0
+			},
+			"SecondaryColor":
+			{
+				"R": 20,
+				"G": 20,
+				"B": 20
+			},
+			"SurfaceType": "Plastic"
+		}
+	],
+	"Collision": [],
+	"Lights": [],
+	"SnapPointsGlobal": false,
+	"SnapPoints": [],
+	"ZoomViewDirection":
+	{
+		"X": 0,
+		"Y": 0,
+		"Z": 0
+	},
+	"GroundAccessibility": "Nothing",
+	"Tags": [],
+	"CardsCenter":
+	{
+		"X": 0,
+		"Y": 0,
+		"Z": 0.39999999403953562
+	},
+	"CardsWidth": 24,
+	"MaxCards": 12,
+	"MaxCardHeight": 9
+}

@@ -44,7 +44,7 @@
 	"BackTexture": "players/mollusk-union/plans-back.jpg",
 	"HiddenTexture": "",
 	"BackIndex": -2,
-	"HiddenIndex": -1,
+	"HiddenIndex": -3,
 	"NumHorizontal": 5,
 	"NumVertical": 3,
 	"Width": 6.3,

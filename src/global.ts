@@ -1,7 +1,8 @@
-import type { GameObject } from "@tabletop-playground/api";
+import type { GameObject, Player } from "@tabletop-playground/api";
 import {
   Card,
   GameWorld,
+  globalEvents,
   Rotator,
   Vector,
   world,
@@ -9,6 +10,19 @@ import {
 import { initialSetup } from "./lib/setup";
 
 if (world.getAllObjects().length === 0) initialSetup();
+
+// Hotkey to mimic hot seat functionality
+globalEvents.onScriptButtonPressed.add((player: Player, index: number) => {
+  const dir = [, -1, 1][index];
+  if (dir) {
+    const n = world
+      .getAllObjects()
+      .filter((d) =>
+        ["board", "board-back"].includes(d.getTemplateName()),
+      ).length;
+    player.switchSlot((n + player.getSlot() + dir) % n);
+  }
+});
 
 // Extend GameWorld
 declare module "@tabletop-playground/api" {

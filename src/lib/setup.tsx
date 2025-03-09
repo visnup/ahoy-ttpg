@@ -132,7 +132,7 @@ function setupPieces(button: Button) {
   }
 
   // 3. Seat players
-  for (const p of positions.filter((p) => p.color)) {
+  for (const [slot, p] of positions.filter((p) => p.color).entries()) {
     if (p.board?.getTemplateId() === p.template) continue;
     const back = p.board!;
     const board = (p.board = world.createObjectFromTemplate(
@@ -140,7 +140,8 @@ function setupPieces(button: Button) {
       back.getPosition(),
     )!);
     board.setRotation(back.getRotation());
-    if ("setup" in board && typeof board.setup === "function") board.setup();
+    if ("setup" in board && typeof board.setup === "function")
+      board.setup(slot);
     back.destroy();
   }
 

@@ -9,7 +9,7 @@ import { players } from "./lib/players";
 const refObject = _refObject;
 
 // @ts-expect-error assign
-refObject.setup = () => {
+refObject.setup = (slot: number) => {
   const p = refObject.getPosition();
   const x = refObject.getRotation().compose([0, 90, 0]).toVector();
   const y = refObject.getRotation().toVector();
@@ -52,10 +52,12 @@ refObject.setup = () => {
           .add([0, 0, 1]),
       );
       ready?.snap();
-      placeDeck(player.plans).shuffle();
       placeShip(player.cutter, [14, 7]);
       placeShip(player.gunship, [18, 7]);
-      // hand
+      placeHolder();
+      const plans = placeDeck(player.plans);
+      plans.shuffle();
+      plans.deal(2, [slot], false, true);
       break;
     }
     case "smuggler-white": {
@@ -140,5 +142,16 @@ refObject.setup = () => {
       cube?.snapToGround();
       return cube;
     });
+  }
+
+  function placeHolder() {
+    const holder = world.createObjectFromTemplate(
+      "9F6ECAB494436798F7BFB89CD8FCF795",
+      p.add([0, 0, 1]).add(y.multiply(-12)),
+    );
+    holder?.setRotation(refObject.getRotation());
+    holder?.snapToGround();
+    holder?.setOwningPlayerSlot(slot);
+    return holder;
   }
 };
