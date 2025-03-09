@@ -84,7 +84,7 @@ refObject.setup = () => {
     ) as Card;
     deck.setRotation(refObject.getRotation());
     deck.snapToGround();
-    if (flip) deck.flipOrUpright();
+    if (flip) deck.flip();
     return deck;
   }
 };

@@ -1,5 +1,11 @@
 import type { GameObject } from "@tabletop-playground/api";
-import { GameWorld, Vector, world } from "@tabletop-playground/api";
+import {
+  Card,
+  GameWorld,
+  Rotator,
+  Vector,
+  world,
+} from "@tabletop-playground/api";
 import { initialSetup } from "./lib/setup";
 
 if (world.getAllObjects().length === 0) initialSetup();
@@ -39,5 +45,19 @@ GameWorld.prototype.isOnTable = function (
     ({ object }) =>
       object.getTemplateName() === obj.getTemplateName() ||
       templateNames.includes(object.getTemplateName()),
+  );
+};
+
+// Extend Card
+declare module "@tabletop-playground/api" {
+  interface Card {
+    flip(): void;
+  }
+}
+Card.prototype.flip = function () {
+  this.setRotation(
+    this.getRotation().compose(
+      Rotator.fromAxisAngle(this.getRotation().toVector(), 180),
+    ),
   );
 };

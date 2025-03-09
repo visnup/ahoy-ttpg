@@ -3,6 +3,7 @@ import {
   refPackageId as _refPackageId,
   Card,
   Dice,
+  Rotator,
   UIElement,
   Vector,
   world,
@@ -158,8 +159,8 @@ function setupPieces(button: Button) {
   const map = regions.takeCards(2)!;
   map.setPosition(origin);
   map.snapToGround();
-  process.nextTick(() => map.flipOrUpright());
-  setTimeout(() => {
+  map.flip();
+  process.nextTick(() => {
     const w = map.getSize().x / 2;
     const two = map.takeCards(1)!;
     map.setPosition(origin.add(x.multiply(w + 1e-2)).add(y.multiply(w / 2)));
@@ -170,7 +171,7 @@ function setupPieces(button: Button) {
       o.snapToGround();
       o.freeze();
     }
-  }, 1000);
+  });
 
   // 6. Place wealth dice
 
@@ -197,7 +198,7 @@ function setupPieces(button: Button) {
   for (let i = 0; i < 3; i++) {
     const card = market.takeCards(1)!;
     card.setPosition(belowFame.add(x.multiply(i * 7)));
-    process.nextTick(() => card.flipOrUpright());
+    card.flip();
   }
 
   // 9. Mark fame track
