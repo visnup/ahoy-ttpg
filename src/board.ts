@@ -1,8 +1,7 @@
+import type { Card, Dice } from "@tabletop-playground/api";
 import {
   refObject as _refObject,
-  Card,
   Color,
-  Dice,
   world,
 } from "@tabletop-playground/api";
 import { players } from "./lib/players";
@@ -26,8 +25,8 @@ refObject.setup = () => {
       const two = ref.takeCards(1)!;
       two.setPosition(ref.getPosition().add(x.multiply(7)));
       for (const c of [ref, two]) c.freeze();
-      placeShip(player.patrol, [16, 6]); // x10
-      placeShip(player.stronghold, [23, 6]); // x3
+      placeShip(player.patrol, [16, 6], 10);
+      placeShip(player.stronghold, [23, 6], 3);
       placeDeck(player["1p"], true, [-16, 0]);
       break;
     }
@@ -70,14 +69,21 @@ refObject.setup = () => {
     }
   }
 
-  function placeShip(id: string, [dx, dy]: [number, number]) {
-    const ship = world.createObjectFromTemplate(
-      id,
-      p.add([0, 0, 1]).add(x.multiply(dx)).add(y.multiply(dy)),
-    )!;
-    ship.setRotation(refObject.getRotation());
-    ship.snapToGround();
-    return ship;
+  function placeShip(id: string, [dx, dy]: [number, number], n = 1) {
+    let columns = Math.floor(Math.sqrt(n));
+    while (n % columns !== 0) columns--;
+    const p0 = p
+      .add([0, -(columns - 1), 2])
+      .add(x.multiply(dx))
+      .add(y.multiply(dy));
+    for (let i = 0; i < n; i++) {
+      const ship = world.createObjectFromTemplate(
+        id,
+        p0.add([Math.floor(i / columns) * 1.2, (i % columns) * 2, 0]),
+      )!;
+      ship.setRotation(refObject.getRotation());
+      ship.snapToGround();
+    }
   }
 
   function placeDice(n: number, { color }: { color: Color }) {
