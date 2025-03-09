@@ -2,7 +2,7 @@
 	"saveStateVersion": "1.1",
 	"gameState": {
 		"measureUnit": 2.54,
-		"rotationStep": 45,
+		"rotationStep": 18,
 		"notes": "You can enter notes for the game here. They will be visible to all players and are stored when the game is saved.\n\nYou can use [color=#ff0000]colors[/color], [b]bold[/b] or [i]italic[/i] text, [size=9]different[/size] [size=16]sizes[/size], and [color=#00ff00][size=8][b][i]combine text styles.[/color][/size][/b][/i]",
 		"turnInfo": {},
 		"slotTeams": [

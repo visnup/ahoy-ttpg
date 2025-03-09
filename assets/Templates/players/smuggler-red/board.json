@@ -171,21 +171,333 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
+				"action"
 			]
 		},
 		{
-			"X": -4,
-			"Y": 7.9470000000000001,
-			"Z": 0,
+			"X": -5.31999979019165,
+			"Y": 5.1300002098083493,
+			"Z": 0.5,
 			"Range": 3,
-			"SnapRotation": 0,
+			"SnapRotation": 2,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"market"
+				"reward"
+			]
+		},
+		{
+			"X": -3.9599998950958253,
+			"Y": 5.1300002098083493,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -2.6000000000000001,
+			"Y": 5.1300002098083493,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -1.2400001049041749,
+			"Y": 5.1300002098083493,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": 0.1199997901916503,
+			"Y": 5.1300002098083493,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -5.31999979019165,
+			"Y": 6.4900001049041744,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -3.9599998950958253,
+			"Y": 6.4900001049041744,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -2.6000000000000001,
+			"Y": 6.4900001049041744,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -1.2400001049041749,
+			"Y": 6.4900001049041744,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": 0.1199997901916503,
+			"Y": 6.4900001049041744,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -5.31999979019165,
+			"Y": 7.8499999999999996,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -3.9599998950958253,
+			"Y": 7.8499999999999996,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -2.6000000000000001,
+			"Y": 7.8499999999999996,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward",
+				"reward:start"
+			]
+		},
+		{
+			"X": -1.2400001049041749,
+			"Y": 7.8499999999999996,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": 0.1199997901916503,
+			"Y": 7.8499999999999996,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -5.31999979019165,
+			"Y": 9.2099998950958248,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -3.9599998950958253,
+			"Y": 9.2099998950958248,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -2.6000000000000001,
+			"Y": 9.2099998950958248,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -1.2400001049041749,
+			"Y": 9.2099998950958248,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": 0.1199997901916503,
+			"Y": 9.2099998950958248,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -5.31999979019165,
+			"Y": 10.56999979019165,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -3.9599998950958253,
+			"Y": 10.56999979019165,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -2.6000000000000001,
+			"Y": 10.56999979019165,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": -1.2400001049041749,
+			"Y": 10.56999979019165,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
+			]
+		},
+		{
+			"X": 0.1199997901916503,
+			"Y": 10.56999979019165,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 2,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"reward"
 			]
 		}
 	],

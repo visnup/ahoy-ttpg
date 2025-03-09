@@ -1,5 +1,10 @@
-import type { Card, Color, Dice } from "@tabletop-playground/api";
-import { refObject as _refObject, world } from "@tabletop-playground/api";
+import {
+  refObject as _refObject,
+  Card,
+  Color,
+  Dice,
+  world,
+} from "@tabletop-playground/api";
 import { players } from "./lib/players";
 
 const refObject = _refObject;
@@ -32,7 +37,7 @@ refObject.setup = () => {
       placeGold();
       placeDeck(player.reference, true);
       placeDeck(player.pledge, true, [0, -10]);
-      // cubes
+      placeReward();
       break;
     }
     case "mollusk-union": {
@@ -60,7 +65,7 @@ refObject.setup = () => {
       placeGold();
       placeDeck(player.reference, true);
       placeDeck(player.pledge, true, [0, -10]);
-      // cubes
+      placeReward();
       break;
     }
   }
@@ -113,5 +118,21 @@ refObject.setup = () => {
     deck.snapToGround();
     if (flip) deck.flip();
     return deck;
+  }
+
+  function placeReward() {
+    const start = refObject
+      .getAllSnapPoints()
+      .find((s) => s.getTags().includes("reward:start"))!;
+    return [new Color(0, 0, 0, 1), new Color(1, 1, 1, 1)].map((color) => {
+      const cube = world.createObjectFromTemplate(
+        "FF60F606CD4B187A377E00BD275848DF",
+        start.getGlobalPosition().add([0, 0, 3]),
+      );
+      cube?.setPrimaryColor(color);
+      cube?.setRotation(refObject.getRotation());
+      cube?.snapToGround();
+      return cube;
+    });
   }
 };
