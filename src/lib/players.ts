@@ -10,6 +10,7 @@ export const players = [
     patrol: "C31FE232614EE2EC6C993698D2D75000",
     stronghold: "3BD41C49A44EA55E73587480D051E34B",
     reference: "94030539784BE6D3AC575BA051EEC8A5",
+    "1p": "7EEB28975149DBB01B93DB8D0EEC4B99",
   },
   {
     name: "smuggler-red",

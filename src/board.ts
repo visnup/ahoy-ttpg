@@ -23,6 +23,7 @@ refObject.setup = () => {
       for (const c of [ref, two]) c.freeze();
       placeShip(player.patrol, [16, 6]); // x10
       placeShip(player.stronghold, [23, 6]); // x3
+      placeDeck(player["1p"], true, [-16, 0]);
       break;
     }
     case "smuggler-red": {
@@ -31,6 +32,7 @@ refObject.setup = () => {
       placeGold();
       placeDeck(player.reference, true);
       placeDeck(player.pledge, true, [0, -10]);
+      // cubes
       break;
     }
     case "mollusk-union": {
@@ -49,6 +51,7 @@ refObject.setup = () => {
       placeDeck(player.plans).shuffle();
       placeShip(player.cutter, [14, 7]);
       placeShip(player.gunship, [18, 7]);
+      // hand
       break;
     }
     case "smuggler-white": {
@@ -57,6 +60,7 @@ refObject.setup = () => {
       placeGold();
       placeDeck(player.reference, true);
       placeDeck(player.pledge, true, [0, -10]);
+      // cubes
       break;
     }
   }
