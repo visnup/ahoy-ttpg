@@ -198,6 +198,7 @@ function setupPieces(button: Button) {
     const card = market.takeCards(1)!;
     card.setPosition(belowFame.add(x.multiply(i * 7)));
     card.flip();
+    card.snapToGround();
   }
 
   // 9. Mark fame track
