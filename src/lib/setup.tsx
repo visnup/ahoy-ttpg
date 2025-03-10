@@ -57,7 +57,7 @@ export function initialSetup() {
           size={48}
           font="Constantia.ttf"
           fontPackage={refPackageId}
-          onClick={setupPieces}
+          onClick={setup}
         >
           {" Setup "}
         </button>,
@@ -97,7 +97,7 @@ export function initialSetup() {
   removable.addUI(ui);
 }
 
-function setupPieces(button: Button) {
+function setup(button: Button) {
   const fame = world.getObjectByTemplateName("fame")!;
 
   // 1. Collect shared pieces
@@ -170,6 +170,7 @@ function setupPieces(button: Button) {
     for (const o of [map, two]) {
       o.snapToGround();
       o.freeze();
+      if ("setup" in o && typeof o.setup === "function") o.setup();
     }
   });
 
