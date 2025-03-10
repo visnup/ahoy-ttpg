@@ -183,10 +183,7 @@ function setup(button: Button) {
       o.snapToGround();
       if ("setup" in o && typeof o.setup === "function") o.setup();
     }
-    setTimeout(() => {
-      for (const o of [map, two]) o.freeze();
-      world.grid.setSnapType(GridSnapType.None);
-    }, 100);
+    world.grid.setSnapType(GridSnapType.None);
   });
 
   // 6. Place wealth dice

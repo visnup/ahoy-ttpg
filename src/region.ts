@@ -10,15 +10,26 @@ const refCard = _refCard;
 refCard.onGrab.add(enableGrid);
 refCard.onReleased.add(setup);
 
+let freeze: ReturnType<typeof setTimeout>;
+
 function enableGrid() {
   world.grid.setSnapType(GridSnapType.Corners);
+  clearTimeout(freeze);
 }
 
 function setup(region: Card) {
   world.grid.setSnapType(GridSnapType.None);
 
-  // Check if stacked, face down, or die is already placed
+  // Check if stacked or face down
   if (!region.isFaceUp() || region.getStackSize() > 1) return;
+
+  // Freeze after a delay
+  clearTimeout(freeze);
+  freeze = setTimeout(() => {
+    region.freeze();
+  }, 5000);
+
+  // Check if wealth die is already placed
   const hits = world
     .boxTrace(
       region.getPosition(),
