@@ -1,6 +1,7 @@
 {
   "name": "ahoy-ttpg",
   "version": "0.0.1",
+  "license": "ISC",
   "type": "module",
   "scripts": {
     "setup": "ttpg-scripts setup",
