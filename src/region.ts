@@ -7,17 +7,19 @@ import {
 
 const refCard = _refCard;
 
-refCard.onGrab.add(enableGrid);
-refCard.onReleased.add(setup);
+refCard.onGrab.add(onGrab);
+refCard.onReleased.add(onReleased);
 
 let freeze: ReturnType<typeof setTimeout>;
 
-function enableGrid() {
+function onGrab() {
+  // Snap to grid
   world.grid.setSnapType(GridSnapType.Corners);
   clearTimeout(freeze);
 }
 
-function setup(region: Card) {
+function onReleased(region: Card) {
+  // Done snapping
   world.grid.setSnapType(GridSnapType.None);
 
   // Check if stacked or face down
@@ -25,9 +27,7 @@ function setup(region: Card) {
 
   // Freeze after a delay
   clearTimeout(freeze);
-  freeze = setTimeout(() => {
-    region.freeze();
-  }, 5000);
+  freeze = setTimeout(() => region.freeze(), 5000);
 
   // Check if wealth die is already placed
   const hits = world
@@ -51,5 +51,5 @@ function setup(region: Card) {
 
 // @ts-expect-error assign
 refCard.setup = function () {
-  setup(this);
+  onReleased(this);
 };
