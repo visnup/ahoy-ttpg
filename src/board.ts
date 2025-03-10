@@ -79,13 +79,16 @@ refObject.setup = (slot: number) => {
     let columns = Math.floor(Math.sqrt(n));
     while (n % columns !== 0) columns--;
     const p0 = p
-      .add([0, -(columns - 1), 2])
+      .add([0, 0, 2])
       .add(x.multiply(dx))
-      .add(y.multiply(dy));
+      .add(y.multiply(dy))
+      .add(x.multiply(-columns + 1));
     for (let i = 0; i < n; i++) {
       const ship = world.createObjectFromTemplate(
         id,
-        p0.add([Math.floor(i / columns) * 1.2, (i % columns) * 2, 0]),
+        p0
+          .add(x.multiply((i % columns) * 2))
+          .add(y.multiply(Math.floor(i / columns) * 1.2)),
       )!;
       ship.setRotation(refObject.getRotation());
       ship.snapToGround();
