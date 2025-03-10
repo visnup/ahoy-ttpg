@@ -1,6 +1,6 @@
 {
 	"Type": "Card",
-	"GUID": "78CE4AF7A2476DA41E1ACEA0EC0CBB0D",
+	"GUID": "4C0CA475A74BBC5A0758C4B94A6563BF",
 	"Name": "fame",
 	"Metadata": "",
 	"CollisionType": "Regular",
@@ -42,12 +42,12 @@
 	"Tags": [
 		"fame"
 	],
-	"FrontTexture": "players/mollusk-union/fame.jpg",
+	"FrontTexture": "players/fame.jpg",
 	"BackTexture": "",
 	"HiddenTexture": "",
 	"BackIndex": 0,
 	"HiddenIndex": -1,
-	"NumHorizontal": 1,
+	"NumHorizontal": 4,
 	"NumVertical": 1,
 	"Width": 1.3,
 	"Height": 1.3,
@@ -61,7 +61,7 @@
 	"MirrorBack": true,
 	"EmissiveFront": false,
 	"Model": "Rounded",
-	"Indices": [ 0 ],
+	"Indices": [ 0, 1, 2, 3 ],
 	"CardNames":
 	{
 	},
