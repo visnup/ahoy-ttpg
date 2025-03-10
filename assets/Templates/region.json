@@ -1,7 +1,7 @@
 {
 	"Type": "Card",
 	"GUID": "59DF467DB944A6DB31BDC9BE446B910B",
-	"Name": "regions",
+	"Name": "region",
 	"Metadata": "",
 	"CollisionType": "Regular",
 	"Friction": 0.7,
@@ -56,8 +56,8 @@
 	"Tags": [
 		"wealth"
 	],
-	"FrontTexture": "regions.jpg",
-	"BackTexture": "regions-back.jpg",
+	"FrontTexture": "region.jpg",
+	"BackTexture": "region-back.jpg",
 	"HiddenTexture": "",
 	"BackIndex": -2,
 	"HiddenIndex": -1,
