@@ -9,6 +9,13 @@ import { players } from "./lib/players";
 
 const refObject = _refObject;
 
+refObject.onSnappedTo.add((obj, player, snap) => {
+  if (!snap.getTags().includes("action")) return;
+  const { pitch, roll } = obj.getRotation();
+  const { yaw } = refObject.getRotation();
+  obj.setRotation([pitch, yaw, roll]);
+});
+
 // @ts-expect-error assign
 refObject.setup = (slot: number) => {
   const p = refObject.getPosition();
