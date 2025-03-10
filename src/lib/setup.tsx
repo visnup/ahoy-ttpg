@@ -1,4 +1,3 @@
-import type { Button, Color, GameObject } from "@tabletop-playground/api";
 import {
   refPackageId as _refPackageId,
   Card,
@@ -7,6 +6,9 @@ import {
   UIElement,
   Vector,
   world,
+  type Button,
+  type Color,
+  type GameObject,
 } from "@tabletop-playground/api";
 import { jsxInTTPG, render } from "jsx-in-ttpg";
 import { players } from "./players";

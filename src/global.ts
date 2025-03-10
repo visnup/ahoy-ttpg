@@ -1,4 +1,3 @@
-import type { GameObject, Player } from "@tabletop-playground/api";
 import {
   Card,
   GameWorld,
@@ -6,6 +5,8 @@ import {
   Rotator,
   Vector,
   world,
+  type GameObject,
+  type Player,
 } from "@tabletop-playground/api";
 import { initialSetup } from "./lib/setup";
 

@@ -1,8 +1,9 @@
-import type { Card, Dice } from "@tabletop-playground/api";
 import {
   refObject as _refObject,
   Color,
   world,
+  type Card,
+  type Dice,
 } from "@tabletop-playground/api";
 import { players } from "./lib/players";
 

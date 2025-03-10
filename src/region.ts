@@ -1,8 +1,8 @@
-import type { Card } from "@tabletop-playground/api";
 import {
   refCard as _refCard,
   GridSnapType,
   world,
+  type Card,
 } from "@tabletop-playground/api";
 
 const refCard = _refCard;
