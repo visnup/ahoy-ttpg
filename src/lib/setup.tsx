@@ -37,11 +37,6 @@ const rotated = (positions: Position[]) => {
 };
 
 export function initialSetup() {
-  // Grid
-  world.grid.setWidth(5);
-  world.grid.setHeight(5);
-  world.grid.setVerticalOffset(0.5);
-
   const { x, y } = world.getAllTables()[0].getSize();
   const r = Math.max(x, y) / 2 - 20;
 

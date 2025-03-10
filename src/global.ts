@@ -10,6 +10,12 @@ import {
 } from "@tabletop-playground/api";
 import { initialSetup } from "./lib/setup";
 
+// Configuration
+world.setShowDiceRollMessages(false);
+world.grid.setWidth(5);
+world.grid.setHeight(5);
+world.grid.setVerticalOffset(0.5);
+
 // Create initial setup
 if (world.getAllObjects().length === 0) initialSetup();
 
