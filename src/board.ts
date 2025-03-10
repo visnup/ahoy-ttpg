@@ -28,6 +28,7 @@ refObject.setup = (slot: number) => {
       placeShip(player.patrol, [16, 6], 10);
       placeShip(player.stronghold, [23, 6], 3);
       placeDeck(player["1p"], true, [-16, 0]);
+      placeFame(0);
       break;
     }
     case "smuggler-red": {
@@ -37,6 +38,7 @@ refObject.setup = (slot: number) => {
       placeDeck(player.reference, true);
       placeDeck(player.pledge, true, [0, -10]);
       placeReward();
+      placeFame(1);
       break;
     }
     case "mollusk-union": {
@@ -58,6 +60,7 @@ refObject.setup = (slot: number) => {
       const plans = placeDeck(player.plans);
       plans.shuffle();
       plans.deal(2, [slot], false, true);
+      placeFame(2);
       break;
     }
     case "smuggler-white": {
@@ -67,6 +70,7 @@ refObject.setup = (slot: number) => {
       placeDeck(player.reference, true);
       placeDeck(player.pledge, true, [0, -10]);
       placeReward();
+      placeFame(3);
       break;
     }
   }
@@ -153,5 +157,22 @@ refObject.setup = (slot: number) => {
     holder?.snapToGround();
     holder?.setOwningPlayerSlot(slot);
     return holder;
+  }
+
+  function placeFame(i: number) {
+    const deck = world.createObjectFromTemplate(
+      "4C0CA475A74BBC5A0758C4B94A6563BF",
+      p,
+    ) as Card;
+    const marker = deck.takeCards(1, true, i);
+    deck.destroy();
+    const fame = world.getObjectByTemplateName("fame")!;
+    const start = fame
+      .getAllSnapPoints()
+      .find((s) => s.getTags().includes("fame:start"))!;
+    marker?.setPosition(start.getGlobalPosition().add([0, 0, 5]));
+    marker?.setRotation(fame.getRotation());
+    marker?.snapToGround();
+    return marker;
   }
 };
