@@ -57,6 +57,51 @@
 			"IsTwoSided": false,
 			"UseOverrides": true,
 			"SurfaceType": "Plastic"
+		},
+		{
+			"Model": "StaticMesh'/Game/Meshes/Generic/BoardSurface.BoardSurface'",
+			"Offset":
+			{
+				"X": -12,
+				"Y": 0,
+				"Z": 0
+			},
+			"Scale":
+			{
+				"X": 0.23,
+				"Y": 0.525,
+				"Z": 1
+			},
+			"Rotation":
+			{
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			},
+			"Texture": "",
+			"NormalMap": "",
+			"ExtraMap": "",
+			"ExtraMap2": "",
+			"IsTransparent": true,
+			"Alpha": 0.1,
+			"CastShadow": true,
+			"IsTwoSided": false,
+			"UseOverrides": false,
+			"Roughness": 1,
+			"Metallic": 0,
+			"PrimaryColor":
+			{
+				"R": 0,
+				"G": 0,
+				"B": 0
+			},
+			"SecondaryColor":
+			{
+				"R": 0,
+				"G": 0,
+				"B": 0
+			},
+			"SurfaceType": "Plastic"
 		}
 	],
 	"Collision": [],
@@ -582,6 +627,45 @@
 			"FlipValidity": 0,
 			"Tags": [
 				"fame"
+			]
+		},
+		{
+			"X": -12,
+			"Y": -7,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 4,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"market"
+			]
+		},
+		{
+			"X": -12,
+			"Y": 0,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 4,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"market"
+			]
+		},
+		{
+			"X": -12,
+			"Y": 7,
+			"Z": 0.5,
+			"Range": 3,
+			"SnapRotation": 4,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"market"
 			]
 		}
 	],

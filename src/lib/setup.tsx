@@ -58,7 +58,7 @@ export function initialSetup() {
 
     if (!("color" in position) && board.getUIs().length === 0) {
       const ui = new UIElement();
-      ui.position = new Vector(-8.1, 0, 0.4);
+      ui.position = new Vector(-17.1, 0, 0.4);
       ui.scale = 0.2;
       ui.widget = render(
         <button
@@ -200,16 +200,13 @@ function setup(button: Button) {
   market.shuffle();
 
   // 8. Deal market
-  const belowFame = fame
-    .getPosition()
-    .add([0, 0, 1])
-    .add(x.multiply(-7))
-    .add(y.multiply(-12));
+  const row = fame
+    .getAllSnapPoints()
+    .filter((s) => s.getTags().includes("market"));
   for (let i = 0; i < 3; i++) {
     const card = market.takeCards(1)!;
-    card.setPosition(belowFame.add(x.multiply(i * 7)));
-    card.flip();
-    card.snapToGround();
+    card.setPosition(row[i].getGlobalPosition().add([0, 0, 1]));
+    card.snap();
   }
 
   // 9. Mark fame track
