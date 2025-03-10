@@ -9,6 +9,7 @@ import {
 } from "@tabletop-playground/api";
 import { initialSetup } from "./lib/setup";
 
+// Create initial setup
 if (world.getAllObjects().length === 0) initialSetup();
 
 // Hotkey to mimic hot seat functionality

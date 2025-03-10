@@ -1,13 +1,24 @@
 import type { Card } from "@tabletop-playground/api";
-import { refCard as _refCard, world } from "@tabletop-playground/api";
+import {
+  refCard as _refCard,
+  GridSnapType,
+  world,
+} from "@tabletop-playground/api";
 
 const refCard = _refCard;
 
+refCard.onGrab.add(enableGrid);
 refCard.onReleased.add(setup);
 
+function enableGrid() {
+  world.grid.setSnapType(GridSnapType.Corners);
+}
+
 function setup(region: Card) {
-  // Check if face down or die is already placed
-  if (!region.isFaceUp()) return;
+  world.grid.setSnapType(GridSnapType.None);
+
+  // Check if stacked, face down, or die is already placed
+  if (!region.isFaceUp() || region.getStackSize() > 1) return;
   const hits = world
     .boxTrace(
       region.getPosition(),

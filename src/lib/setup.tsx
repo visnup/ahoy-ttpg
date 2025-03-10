@@ -3,6 +3,7 @@ import {
   refPackageId as _refPackageId,
   Card,
   Dice,
+  GridSnapType,
   UIElement,
   Vector,
   world,
@@ -27,14 +28,24 @@ const positions: Position[] = [
   { template: "CD0D5A8D07430CD26FD983914F484812" }, // fame
   { ...players[3], removable: true },
 ];
+const rotated = (positions: Position[]) => {
+  const fame = positions.findIndex((p) => !p.color);
+  if (fame <= 0) return positions;
+  return [...positions.slice(fame), ...positions.slice(0, fame)];
+};
 
 export function initialSetup() {
+  // Grid
+  world.grid.setWidth(5);
+  world.grid.setHeight(5);
+  world.grid.setVerticalOffset(0.5);
+
   const { x, y } = world.getAllTables()[0].getSize();
   const r = Math.max(x, y) / 2 - 20;
 
   // Boards
-  for (const [i, position] of positions.entries()) {
-    const a = (i * 2 * Math.PI) / positions.length + Math.PI;
+  for (const [i, position] of rotated(positions).entries()) {
+    const a = (i * 2 * Math.PI) / positions.length;
     const p = origin.add([r * Math.cos(a), r * Math.sin(a), 0]);
     const board = (position.board ??= world.createObjectFromTemplate(
       position.back ?? position.template,
@@ -43,7 +54,7 @@ export function initialSetup() {
     board.setPosition(p);
     board.setRotation([
       0,
-      (i * 360) / positions.length + ("color" in position ? 0 : 180),
+      (i * 360) / positions.length + ("color" in position ? 180 : 0),
       0,
     ]);
     board.snapToGround();
@@ -163,15 +174,19 @@ function setup(button: Button) {
   process.nextTick(() => {
     const w = map.getSize().x / 2;
     const two = map.takeCards(1)!;
-    map.setPosition(origin.add(x.multiply(w + 1e-2)).add(y.multiply(w / 2)));
+    world.grid.setSnapType(GridSnapType.Corners);
+    map.setPosition(origin.add(x.multiply(w)).add(y.multiply(w / 2)));
     map.setRotation(two.getRotation().compose([0, -90, 0]));
-    two.setPosition(origin.add(x.multiply(-w - 1e-2)).add(y.multiply(-w / 2)));
+    two.setPosition(origin.add(x.multiply(-w)).add(y.multiply(-w / 2)));
     two.setRotation(two.getRotation().compose([0, 90, 0]));
     for (const o of [map, two]) {
       o.snapToGround();
-      o.freeze();
       if ("setup" in o && typeof o.setup === "function") o.setup();
     }
+    setTimeout(() => {
+      for (const o of [map, two]) o.freeze();
+      world.grid.setSnapType(GridSnapType.None);
+    }, 100);
   });
 
   // 6. Place wealth dice
