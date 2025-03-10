@@ -54,7 +54,7 @@ GameWorld.prototype.isOnMap = function (obj: GameObject) {
   return this.lineTrace(
     obj.getPosition(),
     obj.getPosition().add(new Vector(0, 0, -10)),
-  ).some(({ object }) => object.getTemplateName() === "map");
+  ).some(({ object }) => object.getTemplateName() === "region");
 };
 GameWorld.prototype.isOnTable = function (
   obj: GameObject,

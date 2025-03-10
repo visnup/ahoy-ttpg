@@ -1,35 +1,74 @@
 import {
   refCard as _refCard,
   GridSnapType,
+  ObjectType,
   world,
   type Card,
+  type GameObject,
 } from "@tabletop-playground/api";
 
 const refCard = _refCard;
 
 refCard.onGrab.add(onGrab);
 refCard.onReleased.add(onReleased);
-
-let freeze: ReturnType<typeof setTimeout>;
+// @ts-expect-error assign
+refCard.setup = function () {
+  onReleased(this);
+};
 
 function onGrab() {
-  // Snap to grid
-  world.grid.setSnapType(GridSnapType.Corners);
-  clearTimeout(freeze);
+  enableGrid();
+  penetrablePieces();
+  delayedFreeze(false);
 }
 
 function onReleased(region: Card) {
-  // Done snapping
-  world.grid.setSnapType(GridSnapType.None);
+  enableGrid(false);
+  for (const obj of world
+    .boxTrace(
+      region.getPosition(),
+      region.getPosition(),
+      region.getExtent(true, false),
+    )
+    .map((h) => h.object)
+    .filter((o) => o.getTemplateName() !== "region"))
+    obj.setPosition(obj.getPosition().add([0, 0, 1]));
+  penetrablePieces(false);
+  if (region.isFaceUp() && region.getStackSize() === 1) {
+    delayedFreeze();
+    placeWealthDie(region);
+  }
+}
 
-  // Check if stacked or face down
-  if (!region.isFaceUp() || region.getStackSize() > 1) return;
+function enableGrid(enabled = true) {
+  world.grid.setSnapType(enabled ? GridSnapType.Corners : GridSnapType.None);
+}
 
-  // Freeze after a delay
+let freeze: ReturnType<typeof setTimeout>;
+function delayedFreeze(enabled = true) {
   clearTimeout(freeze);
-  freeze = setTimeout(() => region.freeze(), 5000);
+  if (enabled) freeze = setTimeout(() => refCard.freeze(), 2000);
+}
 
-  // Check if wealth die is already placed
+const onTable = new Map<GameObject, number>();
+function penetrablePieces(penetrable = true) {
+  if (penetrable) {
+    for (const obj of world.getAllObjects()) {
+      if (
+        ["board", "fame"].includes(obj.getTemplateName()) ||
+        !world.isOnTable(obj)
+      )
+        continue;
+      onTable.set(obj, obj.getObjectType());
+      obj.setObjectType(ObjectType.Penetrable);
+    }
+  } else {
+    for (const [obj, type] of onTable) obj.setObjectType(type);
+    onTable.clear();
+  }
+}
+
+function placeWealthDie(region: GameObject) {
   const hits = world
     .boxTrace(
       region.getPosition(),
@@ -38,8 +77,6 @@ function onReleased(region: Card) {
     )
     .filter((h) => h.object.getTemplateName() === "wealth");
   if (hits.length > 0) return;
-
-  // Place wealth die
   const wealth = world.createObjectFromTemplate(
     "618F5B66EB4A60801AF271AA0BDFCCF0",
     region.getPosition().add([0, 0, 1]),
@@ -48,8 +85,3 @@ function onReleased(region: Card) {
   wealth.setRotation([pitch, region.getRotation().yaw, roll]);
   wealth.snapToGround();
 }
-
-// @ts-expect-error assign
-refCard.setup = function () {
-  onReleased(this);
-};
