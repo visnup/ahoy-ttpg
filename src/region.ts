@@ -51,13 +51,11 @@ function delayedFreeze(enabled = true) {
 }
 
 const onTable = new Map<GameObject, number>();
+const impenetrable = new Set(["battle", "board", "fame", "region"]);
 function penetrablePieces(penetrable = true) {
   if (penetrable) {
     for (const obj of world.getAllObjects()) {
-      if (
-        ["board", "fame"].includes(obj.getTemplateName()) ||
-        !world.isOnTable(obj)
-      )
+      if (impenetrable.has(obj.getTemplateName()) || !world.isOnTable(obj))
         continue;
       onTable.set(obj, obj.getObjectType());
       obj.setObjectType(ObjectType.Penetrable);
