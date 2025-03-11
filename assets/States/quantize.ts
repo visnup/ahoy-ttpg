@@ -22,6 +22,6 @@ for (const file of files) {
       json,
       (_, v) => (typeof v === "number" ? round(v, 1e3) : v),
       "\t",
-    ),
+    ) + "\n",
   );
 }
