@@ -13,7 +13,8 @@ refObject.onSnappedTo.add((obj, player, snap) => {
   if (!snap.getTags().includes("action")) return;
   const { pitch, roll } = obj.getRotation();
   const { yaw } = refObject.getRotation();
-  obj.setRotation([pitch, yaw, roll]);
+  const gimbalLock = Math.abs(Math.abs(pitch) - 90) < 2;
+  obj.setRotation([gimbalLock ? pitch + 2 : pitch, yaw, roll]);
 });
 
 // @ts-expect-error assign
