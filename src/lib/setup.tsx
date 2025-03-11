@@ -58,11 +58,11 @@ export function initialSetup() {
 
     if (!("color" in position) && board.getUIs().length === 0) {
       const ui = new UIElement();
-      ui.position = new Vector(-17.1, 0, 0.4);
+      ui.position = new Vector(-9.1, 0, 0.4);
       ui.scale = 0.2;
       ui.widget = render(
         <button
-          size={48}
+          size={96}
           font="Constantia.ttf"
           fontPackage={refPackageId}
           onClick={setup}
