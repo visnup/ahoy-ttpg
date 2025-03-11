@@ -37,6 +37,7 @@ function onReleased(region: Card) {
   if (region.isFaceUp() && region.getStackSize() === 1) {
     delayedFreeze();
     placeWealthDie(region);
+    recenterMap();
   }
 }
 
@@ -82,4 +83,55 @@ function placeWealthDie(region: GameObject) {
   const { pitch, roll } = wealth.getRotation();
   wealth.setRotation([pitch, region.getRotation().yaw, roll]);
   wealth.snapToGround();
+}
+
+function recenterMap() {
+  // Find new bounding box center
+  const revealed = world
+    .getObjectsByTemplateName<Card>("region")
+    .filter((r) => r.getStackSize() === 1 && r.isFaceUp());
+  const bbox = revealed
+    .map((r) => r.getPosition())
+    .reduce(
+      ([min, max], p) => [
+        [Math.min(min[0], p[0]), Math.min(min[1], p[1])],
+        [Math.max(max[0], p[0]), Math.max(max[1], p[1])],
+      ],
+      [
+        [Infinity, Infinity],
+        [-Infinity, -Infinity],
+      ],
+    );
+  // Calculate offset, rounding to grid snaps
+  const delta = [
+    (bbox[0][0] + bbox[1][0]) / 2,
+    (bbox[0][1] + bbox[1][1]) / 2,
+    0,
+  ].map((d) => -Math.round(d / 5) * 5) as [number, number, number];
+
+  // Shift regions and objects above them
+  const seen = new Map<string, number>();
+  for (const region of revealed) {
+    // Pieces above
+    const above = world
+      .boxTrace(
+        region.getPosition(),
+        region.getPosition().add([0, 0, 5]),
+        region.getExtent(true, false),
+      )
+      .map((h) => h.object)
+      .filter((o) => o.getTemplateName() !== "region" && !seen.has(o.getId()));
+    for (const obj of above) {
+      obj.setPosition(obj.getPosition().add(delta).add([0, 0, 1]));
+      seen.set(obj.getId(), obj.getObjectType());
+      obj.freeze();
+    }
+    // Region
+    region.setPosition(region.getPosition().add(delta));
+    // Unfreeze objects
+    for (const obj of above) {
+      obj.snapToGround();
+      obj.setObjectType(seen.get(obj.getId())!);
+    }
+  }
 }
