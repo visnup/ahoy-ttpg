@@ -2,7 +2,7 @@
 	"Type": "Generic",
 	"GUID": "8D635EA1AD49A3F819190E819BDA4506",
 	"Name": "flagship",
-	"Metadata": "",
+	"Metadata": "blackfish-brigade",
 	"CollisionType": "Regular",
 	"Friction": 0.7,
 	"Restitution": 0.3,
@@ -25,7 +25,7 @@
 	"Flippable": false,
 	"AutoStraighten": false,
 	"ShouldSnap": true,
-	"ScriptName": "",
+	"ScriptName": "flagship.js",
 	"Blueprint": "",
 	"Models": [
 		{

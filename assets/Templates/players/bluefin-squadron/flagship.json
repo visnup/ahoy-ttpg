@@ -2,7 +2,7 @@
 	"Type": "Generic",
 	"GUID": "631F8E03FB488C23D1AC3C8270C61C8F",
 	"Name": "flagship",
-	"Metadata": "",
+	"Metadata": "bluefin-squadron",
 	"CollisionType": "Regular",
 	"Friction": 0.7,
 	"Restitution": 0.33,
@@ -25,7 +25,7 @@
 	"Flippable": false,
 	"AutoStraighten": false,
 	"ShouldSnap": true,
-	"ScriptName": "",
+	"ScriptName": "flagship.js",
 	"Blueprint": "",
 	"Models": [
 		{

@@ -210,6 +210,7 @@ refObject.setup = (slot: number) => {
           .add(x.multiply((i % columns) * (w ?? 2.2)))
           .add(y.multiply(Math.floor(i / columns) * (h ?? 1.2))),
       )!;
+      ship.setOwningPlayerSlot(slot);
       if (!w) {
         const { x, y } = ship.getSize();
         w = y + 0.2;
@@ -254,6 +255,7 @@ refObject.setup = (slot: number) => {
       id,
       p.add([0, 0, 5]).add(x.multiply(dx)).add(y.multiply(dy)),
     ) as Card;
+    deck.setOwningPlayerSlot(slot);
     deck.setRotation(refObject.getRotation());
     deck.snapToGround();
     if (flip) deck.flip();
