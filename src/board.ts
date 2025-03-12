@@ -2,12 +2,23 @@ import {
   refObject as _refObject,
   Color,
   world,
+  ZonePermission,
   type Card,
   type Dice,
 } from "@tabletop-playground/api";
 import { players } from "./lib/players";
 
 const refObject = _refObject;
+
+// Market no-staacking zone
+const zone =
+  world.getZoneById(`cards-${refObject.getId()}`) ??
+  world.createZone(refObject.getPosition());
+zone.setId(`cards-${refObject.getId()}`);
+process.nextTick(() => zone.setRotation(refObject.getRotation()));
+zone.setScale([refObject.getSize().x, refObject.getSize().y, 2]);
+zone.setStacking(ZonePermission.Nobody);
+refObject.onDestroyed.add(() => zone.destroy());
 
 refObject.onSnappedTo.add((obj, player, snap) => {
   if (!snap.getTags().includes("action")) return;
