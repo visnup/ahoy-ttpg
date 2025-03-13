@@ -92,7 +92,26 @@
 		}
 	],
 	"storedCameraSetups": [
-		false,
+		{
+			"location": {
+				"x": -19.158,
+				"y": 0,
+				"z": 139.279
+			},
+			"pawnRotation": {
+				"x": 0,
+				"y": 0,
+				"z": 0,
+				"w": 1
+			},
+			"controlRotation": {
+				"pitch": 288.475,
+				"yaw": 0,
+				"roll": 0
+			},
+			"playerScale": 1,
+			"flying": true
+		},
 		false,
 		false,
 		false,
