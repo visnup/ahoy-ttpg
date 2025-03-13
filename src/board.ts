@@ -10,7 +10,7 @@ import { players } from "./lib/players";
 
 const refObject = _refObject;
 
-// Market no-staacking zone
+// Market no-stacking zone
 const zone =
   world.getZoneById(`cards-${refObject.getId()}`) ??
   world.createZone(refObject.getPosition());
@@ -20,6 +20,7 @@ zone.setScale([refObject.getSize().x, refObject.getSize().y, 2]);
 zone.setStacking(ZonePermission.Nobody);
 refObject.onDestroyed.add(() => zone.destroy());
 
+// Orient dice placed on slots
 refObject.onSnappedTo.add((obj, player, snap) => {
   if (!snap.getTags().includes("action")) return;
   const { pitch, roll } = obj.getRotation();
@@ -28,6 +29,7 @@ refObject.onSnappedTo.add((obj, player, snap) => {
   obj.setRotation([gimbalLock ? pitch + 2 : pitch, yaw, roll]);
 });
 
+// Collect all faction pieces
 // @ts-expect-error assign
 refObject.setup = (slot: number) => {
   const p = refObject.getPosition();
