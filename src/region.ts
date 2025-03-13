@@ -28,7 +28,8 @@ function onReleased(region: Card) {
     .boxTrace(
       region.getPosition(),
       region.getPosition(),
-      region.getExtent(true, false),
+      region.getExtent(false, false),
+      region.getRotation(),
     )
     .map((h) => h.object)
     .filter((o) => o.getTemplateName() !== "region"))
@@ -72,7 +73,8 @@ function placeWealthDie(region: GameObject) {
     .boxTrace(
       region.getPosition(),
       region.getPosition().add([0, 0, 1]),
-      region.getExtent(true, false),
+      region.getExtent(false, false),
+      region.getRotation(),
     )
     .filter((h) => h.object.getTemplateName() === "wealth");
   if (hits.length > 0) return;
@@ -117,7 +119,8 @@ function recenterMap() {
       .boxTrace(
         region.getPosition(),
         region.getPosition().add([0, 0, 5]),
-        region.getExtent(true, false),
+        region.getExtent(false, false),
+        region.getRotation(),
       )
       .map((h) => h.object)
       .filter((o) => o.getTemplateName() !== "region" && !seen.has(o.getId()));
