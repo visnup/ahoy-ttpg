@@ -14,7 +14,7 @@ import { jsxInTTPG, render } from "jsx-in-ttpg";
 import { players } from "./players";
 
 const refPackageId = _refPackageId;
-const origin = new Vector(0, 0, world.getTableHeight() + 0.5);
+const origin = new Vector(0, 0, world.getTableHeight() + 0.2);
 
 type Position = {
   template: string;
