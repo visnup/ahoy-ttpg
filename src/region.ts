@@ -110,6 +110,7 @@ function recenterMap() {
     (bbox[0][1] + bbox[1][1]) / 2,
     0,
   ].map((d) => -Math.round(d / 5) * 5) as [number, number, number];
+  if (delta.every((d) => d === 0)) return;
 
   // Shift regions and objects above them
   const seen = new Map<string, number>();
@@ -125,12 +126,12 @@ function recenterMap() {
       .map((h) => h.object)
       .filter((o) => o.getTemplateName() !== "region" && !seen.has(o.getId()));
     for (const obj of above) {
-      obj.setPosition(obj.getPosition().add(delta).add([0, 0, 1]));
+      obj.setPosition(obj.getPosition().add(delta).add([0, 0, 1]), 2);
       seen.set(obj.getId(), obj.getObjectType());
       obj.freeze();
     }
     // Region
-    region.setPosition(region.getPosition().add(delta));
+    region.setPosition(region.getPosition().add(delta), 2);
     // Unfreeze objects
     for (const obj of above) {
       obj.snapToGround();
