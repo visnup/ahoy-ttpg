@@ -15,3 +15,6 @@ figures z=0.97
 
 board snap points
 X=5.1, -2.4
+
+flagship 0.97 3.38 3.6
+patrol 0.97 1.5 1.5

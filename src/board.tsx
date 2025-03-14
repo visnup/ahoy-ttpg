@@ -37,16 +37,34 @@ refObject.setup = (slot: number) => {
   const y = refObject.getRotation().toVector();
   const gold = world.getObjectByTemplateName<Card>("gold")!;
 
-  const player = players.find((p) => p.template === refObject.getTemplateId());
+  const player = players
+    .flat()
+    .find((p) => p.template === refObject.getTemplateId());
   switch (player?.name) {
+    case "blackfish-brigade": {
+      placeShip(player.flagship, [-9, 9]);
+      placeDice(5, player);
+      placeGold();
+      const ref = placeDeck(player.reference, true);
+      const two = ref.takeCards(1, true, 1)!;
+      two.setPosition(ref.getPosition().add(x.multiply(7)));
+      const three = ref.takeCards(1, true, 1)!;
+      three.setPosition(ref.getPosition().add(x.multiply(14)));
+      placeDeck(player["whale-pod-tile"], false, [16, 8]).freeze();
+      placeShip(player["whale-pod"], [16, 8]);
+      placeShip(player.patrol, [23, 6], 10);
+      placeShip(player["veteran-patrol"], [30, 6], 3);
+      placeDeck(player["1p"], true, [-16, 0]);
+      placeFame(4);
+      break;
+    }
     case "bluefin-squadron": {
       placeShip(player.flagship, [-9, 9]);
       placeDice(5, player);
       placeGold();
-      const ref = placeDeck(player.reference);
-      const two = ref.takeCards(1)!;
+      const ref = placeDeck(player.reference, true);
+      const two = ref.takeCards(1, true, 1)!;
       two.setPosition(ref.getPosition().add(x.multiply(7)));
-      for (const c of [ref, two]) c.freeze();
       placeShip(player.patrol, [16, 6], 10);
       placeShip(player.stronghold, [23, 6], 3);
       placeDeck(player["1p"], true, [-16, 0]);

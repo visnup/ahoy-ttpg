@@ -1,0 +1,77 @@
+{
+	"Type": "Generic",
+	"GUID": "634ABB795743EF1E644EC286CC3B07E0",
+	"Name": "whale-pod",
+	"Metadata": "",
+	"CollisionType": "Penetrable",
+	"Friction": 0.7,
+	"Restitution": 0.3,
+	"Density": 1,
+	"SurfaceType": "Plastic",
+	"Roughness": 1,
+	"Metallic": 0,
+	"PrimaryColor":
+	{
+		"R": 21,
+		"G": 40,
+		"B": 76
+	},
+	"SecondaryColor":
+	{
+		"R": 0,
+		"G": 0,
+		"B": 0
+	},
+	"Flippable": false,
+	"AutoStraighten": false,
+	"ShouldSnap": true,
+	"ScriptName": "",
+	"Blueprint": "",
+	"Models": [
+		{
+			"Model": "players/blackfish-brigade/whale-pod.png",
+			"ShapeAccuracy": 10,
+			"Offset":
+			{
+				"X": 0,
+				"Y": 0,
+				"Z": 0
+			},
+			"Scale":
+			{
+				"X": 3.5078122455466363,
+				"Y": 3.4999999002472215,
+				"Z": 1.1000000000000447
+			},
+			"Rotation":
+			{
+				"X": -0,
+				"Y": 0,
+				"Z": 0
+			},
+			"Texture": "players/blackfish-brigade/whale-pod.png",
+			"NormalMap": "",
+			"ExtraMap": "Texture2D'/Game/Textures/T_BlackMap.T_BlackMap'",
+			"ExtraMap2": "",
+			"IsTransparent": false,
+			"CastShadow": true,
+			"IsTwoSided": false,
+			"UseOverrides": true,
+			"SurfaceType": "Plastic"
+		}
+	],
+	"Collision": [],
+	"Lights": [],
+	"SnapPointsGlobal": false,
+	"SnapPoints": [],
+	"ZoomViewDirection":
+	{
+		"X": 0,
+		"Y": 0,
+		"Z": 0
+	},
+	"GroundAccessibility": "Nothing",
+	"Tags": [
+		"pod"
+	]
+}

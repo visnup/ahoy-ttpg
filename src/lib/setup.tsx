@@ -23,11 +23,11 @@ type Position = {
   removable?: true;
 };
 const positions: Position[] = [
-  { ...players[0] },
-  { ...players[1], removable: true },
-  { ...players[2] },
+  { ...players[0][0] },
+  { ...players[1][0], removable: true },
+  { ...players[2][0] },
   { template: "CD0D5A8D07430CD26FD983914F484812" }, // fame
-  { ...players[3], removable: true },
+  { ...players[3][0], removable: true },
 ];
 const rotated = (positions: Position[]) => {
   const fame = positions.findIndex((p) => !p.color);

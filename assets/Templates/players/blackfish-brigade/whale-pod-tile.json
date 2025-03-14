@@ -1,7 +1,7 @@
 {
 	"Type": "Card",
-	"GUID": "4C0CA475A74BBC5A0758C4B94A6563BF",
-	"Name": "fame-marker",
+	"GUID": "55424DB91240393F7B31308C77E2464F",
+	"Name": "whale-pod-tile",
 	"Metadata": "",
 	"CollisionType": "Regular",
 	"Friction": 0.7,
@@ -39,18 +39,16 @@
 		"Z": 0
 	},
 	"GroundAccessibility": "Nothing",
-	"Tags": [
-		"fame"
-	],
-	"FrontTexture": "players/fame.jpg",
+	"Tags": [],
+	"FrontTexture": "players/blackfish-brigade/whale-pod-tile.jpg",
 	"BackTexture": "",
 	"HiddenTexture": "",
-	"BackIndex": -1,
+	"BackIndex": 0,
 	"HiddenIndex": -1,
-	"NumHorizontal": 8,
+	"NumHorizontal": 1,
 	"NumVertical": 1,
-	"Width": 1.3,
-	"Height": 1.3,
+	"Width": 6,
+	"Height": 6,
 	"Thickness": 0.2,
 	"HiddenInHand": false,
 	"UsedWithCardHolders": false,
@@ -61,7 +59,7 @@
 	"MirrorBack": true,
 	"EmissiveFront": false,
 	"Model": "Rounded",
-	"Indices": [ 0, 1, 2, 3, 4, 5, 6, 7 ],
+	"Indices": [ 0 ],
 	"CardNames":
 	{
 	},
