@@ -1,18 +1,13 @@
 import {
   refObject as _refObject,
-  refPackageId as _refPackageId,
   Color,
-  UIElement,
-  Vector,
   world,
   ZonePermission,
   type Card,
   type Dice,
 } from "@tabletop-playground/api";
-import { jsxInTTPG, render } from "jsx-in-ttpg";
 import { players } from "./lib/players";
 
-const refPackageId = _refPackageId;
 const refObject = _refObject;
 
 // Market no-stacking zone
