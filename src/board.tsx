@@ -34,29 +34,6 @@ refObject.onSnappedTo.add((obj, player, snap) => {
   obj.setRotation([gimbalLock ? pitch + 2 : pitch, yaw, roll]);
 });
 
-// Take seat
-const ui = new UIElement();
-ui.position = new Vector(-18, 0, 0.2);
-ui.scale = 0.2;
-ui.widget = render(
-  <button
-    size={48}
-    font="Constantia.ttf"
-    fontPackage={refPackageId}
-    onClick={(button, player) => {
-      const origin = new Vector(0, 0, world.getTableHeight());
-      const p = Vector.lerp(origin, refObject.getPosition(), 2).add([0, 0, 50]);
-      player.setPositionAndRotation(
-        p,
-        p.findLookAtRotation(Vector.lerp(origin, refObject.getPosition(), 0.5)),
-      );
-    }}
-  >
-    {" Sit "}
-  </button>,
-);
-refObject.addUI(ui);
-
 // Collect all faction pieces
 // @ts-expect-error assign
 refObject.setup = (slot: number) => {

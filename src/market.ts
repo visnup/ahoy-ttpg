@@ -25,17 +25,20 @@ if (refCard.getStackSize() === 1) {
     // Pick the board and everything on it up slightly
     const lift = 1;
     const pb = board.getPosition();
-    const above = world
-      .boxTrace(
-        pb,
-        pb.add([0, 0, lift]),
-        board.getExtent(false, false),
-        board.getRotation(),
-      )
-      .filter((h) => h.object.getTemplateName() !== "market");
-    for (const { object } of above) {
-      console.log(object.getId(), object.getTemplateName());
-      object.setPosition(object.getPosition().add([0, 0, lift]));
+    const above = new Set(
+      world
+        .boxTrace(
+          pb,
+          pb.add([0, 0, lift]),
+          board.getExtent(false, true),
+          board.getRotation(),
+        )
+        .filter((h) => h.object.getTemplateName() !== "market")
+        .map((h) => h.object),
+    );
+    for (const obj of above) {
+      obj.setPosition(obj.getPosition().add([0, 0, lift]), 1);
+      obj.freeze();
     }
 
     // Tuck the card under
@@ -44,7 +47,9 @@ if (refCard.getStackSize() === 1) {
     card.snapToGround();
 
     // Put the board and everything back down
-    for (const { object } of above)
-      object.setPosition(object.getPosition().add([0, 0, -lift]));
+    setTimeout(() => {
+      for (const obj of above)
+        obj.setPosition(obj.getPosition().add([0, 0, -lift]), 1);
+    }, 200);
   });
 }
