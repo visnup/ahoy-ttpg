@@ -1,5 +1,5 @@
 {
-	"Type": "Generic",
+	"Type": "Card",
 	"GUID": "19F163665B477FC3B87512BEC2175203",
 	"Name": "board",
 	"Metadata": "",
@@ -22,43 +22,12 @@
 		"G": 0,
 		"B": 0
 	},
-	"Flippable": false,
+	"Flippable": true,
 	"AutoStraighten": false,
 	"ShouldSnap": true,
 	"ScriptName": "board.js",
-	"Blueprint": "Blueprints/Board.json",
-	"Models": [
-		{
-			"Model": "StaticMesh'/Game/Meshes/Generic/BoardSurface.BoardSurface'",
-			"Offset":
-			{
-				"X": 0,
-				"Y": 0,
-				"Z": -0.3
-			},
-			"Scale":
-			{
-				"X": 0.35003680529996306,
-				"Y": 0.57499999999999996,
-				"Z": 0.99996771864820766
-			},
-			"Rotation":
-			{
-				"X": -0,
-				"Y": 0,
-				"Z": 0
-			},
-			"Texture": "players/mollusk-union/board.jpg",
-			"NormalMap": "",
-			"ExtraMap": "",
-			"ExtraMap2": "",
-			"IsTransparent": false,
-			"CastShadow": true,
-			"IsTwoSided": false,
-			"UseOverrides": true,
-			"SurfaceType": "Plastic"
-		}
-	],
+	"Blueprint": "",
+	"Models": [],
 	"Collision": [],
 	"Lights": [],
 	"SnapPointsGlobal": false,
@@ -66,7 +35,7 @@
 		{
 			"X": 5.0999999999999996,
 			"Y": -10.1,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -79,7 +48,7 @@
 		{
 			"X": 5.0999999999999996,
 			"Y": -8.1999999999999993,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -92,7 +61,7 @@
 		{
 			"X": 5.0999999999999996,
 			"Y": -6.4000000000000004,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -105,7 +74,7 @@
 		{
 			"X": 5.0999999999999996,
 			"Y": -4.5,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -118,7 +87,7 @@
 		{
 			"X": 5.0999999999999996,
 			"Y": -2.1000000000000001,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -131,7 +100,7 @@
 		{
 			"X": 5.0999999999999996,
 			"Y": -0.20000000000000001,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -144,7 +113,7 @@
 		{
 			"X": 5.0999999999999996,
 			"Y": 2.7999999999999998,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -157,7 +126,7 @@
 		{
 			"X": -2.3999999999999999,
 			"Y": -9.25,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -170,7 +139,7 @@
 		{
 			"X": -2.3999999999999999,
 			"Y": -5.1500000000000004,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -183,7 +152,7 @@
 		{
 			"X": -2.3999999999999999,
 			"Y": -1.05,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -196,7 +165,7 @@
 		{
 			"X": -2.3999999999999999,
 			"Y": 2.7999999999999998,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -209,7 +178,7 @@
 		{
 			"X": -5.6799999999999997,
 			"Y": 10.27,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -227,5 +196,34 @@
 		"Z": 1
 	},
 	"GroundAccessibility": "Zoom",
-	"Tags": []
+	"Tags": [],
+	"FrontTexture": "players/mollusk-union/board-back.jpg",
+	"BackTexture": "players/mollusk-union/board.jpg",
+	"HiddenTexture": "",
+	"BackIndex": -2,
+	"HiddenIndex": -1,
+	"NumHorizontal": 1,
+	"NumVertical": 1,
+	"Width": 23,
+	"Height": 14,
+	"Thickness": 0.2,
+	"HiddenInHand": false,
+	"UsedWithCardHolders": false,
+	"CanStack": false,
+	"UsePrimaryColorForSide": false,
+	"FrontTextureOverrideExposed": false,
+	"AllowFlippedInStack": false,
+	"MirrorBack": true,
+	"EmissiveFront": false,
+	"Model": "Rounded",
+	"Indices": [ 0 ],
+	"CardNames":
+	{
+	},
+	"CardMetadata":
+	{
+	},
+	"CardTags":
+	{
+	}
 }

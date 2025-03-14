@@ -3,12 +3,12 @@ import {
   Card,
   Dice,
   GridSnapType,
+  Rotator,
   UIElement,
   Vector,
   world,
   type Button,
   type Color,
-  type GameObject,
 } from "@tabletop-playground/api";
 import { jsxInTTPG, render } from "jsx-in-ttpg";
 import { players } from "./players";
@@ -18,9 +18,8 @@ const origin = new Vector(0, 0, world.getTableHeight() + 0.2);
 
 type Position = {
   template: string;
-  back?: string;
   color?: Color;
-  board?: GameObject;
+  board?: Card;
   removable?: true;
 };
 const positions: Position[] = [
@@ -45,9 +44,9 @@ export function initialSetup() {
     const a = (i * 2 * Math.PI) / positions.length;
     const p = origin.add([r * Math.cos(a), r * Math.sin(a), 0]);
     const board = (position.board ??= world.createObjectFromTemplate(
-      position.back ?? position.template,
+      position.template,
       p,
-    )!);
+    ) as Card);
     board.setPosition(p);
     board.setRotation([
       0,
@@ -55,10 +54,16 @@ export function initialSetup() {
       0,
     ]);
     board.snapToGround();
+    if ("color" in position)
+      board.setRotation(
+        board
+          .getRotation()
+          .compose(Rotator.fromAxisAngle(board.getRotation().toVector(), 180)),
+      );
 
     if (!("color" in position) && board.getUIs().length === 0) {
       const ui = new UIElement();
-      ui.position = new Vector(-9.1, 0, 0.4);
+      ui.position = new Vector(-9.1, 0, 0.2);
       ui.scale = 0.2;
       ui.widget = render(
         <button
@@ -83,7 +88,8 @@ export function initialSetup() {
   const removable = positions.findLast((p) => p.removable)?.board;
   if (!removable) return;
   const ui = new UIElement();
-  ui.position = new Vector(8.1, 0, 0.4);
+  ui.position = new Vector(8.1, 0, -0.2);
+  ui.rotation = new Rotator(180, 180, 0);
   ui.scale = 0.2;
   ui.widget = render(
     <button
@@ -141,16 +147,10 @@ function setup(button: Button) {
 
   // 3. Seat players
   for (const [slot, p] of positions.filter((p) => p.color).entries()) {
-    if (p.board?.getTemplateId() === p.template) continue;
-    const back = p.board!;
-    const board = (p.board = world.createObjectFromTemplate(
-      p.template,
-      back.getPosition(),
-    )!);
-    board.setRotation(back.getRotation());
-    if ("setup" in board && typeof board.setup === "function")
-      board.setup(slot);
-    back.destroy();
+    if (!p.board || !p.board.isFaceUp()) continue;
+    p.board.flip();
+    if ("setup" in p.board && typeof p.board.setup === "function")
+      p.board.setup(slot);
   }
 
   // 4. Prepare region stack

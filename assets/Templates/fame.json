@@ -1,5 +1,5 @@
 {
-	"Type": "Generic",
+	"Type": "Card",
 	"GUID": "CD0D5A8D07430CD26FD983914F484812",
 	"Name": "fame",
 	"Metadata": "",
@@ -22,88 +22,12 @@
 		"G": 0,
 		"B": 0
 	},
-	"Flippable": false,
+	"Flippable": true,
 	"AutoStraighten": false,
 	"ShouldSnap": true,
 	"ScriptName": "",
-	"Blueprint": "Blueprints/Board.json",
-	"Models": [
-		{
-			"Model": "StaticMesh'/Game/Meshes/Generic/BoardSurface.BoardSurface'",
-			"Offset":
-			{
-				"X": 0,
-				"Y": 0,
-				"Z": -0.3
-			},
-			"Scale":
-			{
-				"X": 0.35003680529996323,
-				"Y": 0.57499999999999996,
-				"Z": 0.99996771864820766
-			},
-			"Rotation":
-			{
-				"X": -0,
-				"Y": 0,
-				"Z": 0
-			},
-			"Texture": "fame.jpg",
-			"NormalMap": "",
-			"ExtraMap": "",
-			"ExtraMap2": "",
-			"IsTransparent": false,
-			"CastShadow": true,
-			"IsTwoSided": false,
-			"UseOverrides": true,
-			"SurfaceType": "Plastic"
-		},
-		{
-			"Model": "StaticMesh'/Game/Meshes/Generic/BoardSurface.BoardSurface'",
-			"Offset":
-			{
-				"X": -12,
-				"Y": 0,
-				"Z": 0
-			},
-			"Scale":
-			{
-				"X": 0.23,
-				"Y": 0.525,
-				"Z": 1
-			},
-			"Rotation":
-			{
-				"X": 0,
-				"Y": 0,
-				"Z": 0
-			},
-			"Texture": "",
-			"NormalMap": "",
-			"ExtraMap": "",
-			"ExtraMap2": "",
-			"IsTransparent": true,
-			"Alpha": 0.1,
-			"CastShadow": true,
-			"IsTwoSided": false,
-			"UseOverrides": false,
-			"Roughness": 1,
-			"Metallic": 0,
-			"PrimaryColor":
-			{
-				"R": 0,
-				"G": 0,
-				"B": 0
-			},
-			"SecondaryColor":
-			{
-				"R": 0,
-				"G": 0,
-				"B": 0
-			},
-			"SurfaceType": "Plastic"
-		}
-	],
+	"Blueprint": "",
+	"Models": [],
 	"Collision": [],
 	"Lights": [],
 	"SnapPointsGlobal": true,
@@ -111,7 +35,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": -7.2899994850158691,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -124,7 +48,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": -7.2899994850158691,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -137,7 +61,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": -7.2899994850158691,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -150,7 +74,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": -7.2899994850158691,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -164,7 +88,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": -5.6699995994567871,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -177,7 +101,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": -5.6699995994567871,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -190,7 +114,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": -5.6699995994567871,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -203,7 +127,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": -5.6699995994567871,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -216,7 +140,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": -4.0499997138977051,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -229,7 +153,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": -4.0499997138977051,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -242,7 +166,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": -4.0499997138977051,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -255,7 +179,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": -4.0499997138977051,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -268,7 +192,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": -2.429999828338623,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -281,7 +205,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": -2.429999828338623,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -294,7 +218,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": -2.429999828338623,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -307,7 +231,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": -2.429999828338623,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -320,7 +244,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": -0.80999994277954102,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -333,7 +257,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": -0.80999994277954102,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -346,7 +270,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": -0.80999994277954102,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -359,7 +283,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": -0.80999994277954102,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -372,7 +296,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": 0.80999994277954102,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -385,7 +309,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": 0.80999994277954102,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -398,7 +322,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": 0.80999994277954102,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -411,7 +335,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": 0.80999994277954102,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -424,7 +348,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": 2.429999828338623,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -437,7 +361,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": 2.429999828338623,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -450,7 +374,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": 2.429999828338623,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -463,7 +387,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": 2.429999828338623,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -476,7 +400,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": 4.0499997138977051,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -489,7 +413,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": 4.0499997138977051,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -502,7 +426,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": 4.0499997138977051,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -515,7 +439,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": 4.0499997138977051,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -528,7 +452,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": 5.6699995994567871,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -541,7 +465,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": 5.6699995994567871,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -554,7 +478,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": 5.6699995994567871,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -567,7 +491,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": 5.6699995994567871,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -580,7 +504,7 @@
 		{
 			"X": -2.8999998569488525,
 			"Y": 7.2899994850158691,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -593,7 +517,7 @@
 		{
 			"X": -1.2999999523162842,
 			"Y": 7.2899994850158691,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -606,7 +530,7 @@
 		{
 			"X": 0.29999995231628418,
 			"Y": 7.2899994850158691,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -619,7 +543,7 @@
 		{
 			"X": 1.8999998569488525,
 			"Y": 7.2899994850158691,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 1,
 			"SnapRotation": 2,
 			"RotationOffset": 0,
@@ -632,7 +556,7 @@
 		{
 			"X": -12,
 			"Y": -7,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 4,
 			"RotationOffset": 0,
@@ -645,7 +569,7 @@
 		{
 			"X": -12,
 			"Y": 0,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 4,
 			"RotationOffset": 0,
@@ -658,7 +582,7 @@
 		{
 			"X": -12,
 			"Y": 7,
-			"Z": 0.2,
+			"Z": 0.20000000000000001,
 			"Range": 3,
 			"SnapRotation": 4,
 			"RotationOffset": 0,
@@ -676,5 +600,34 @@
 		"Z": 0
 	},
 	"GroundAccessibility": "Nothing",
-	"Tags": []
+	"Tags": [],
+	"FrontTexture": "fame.jpg",
+	"BackTexture": "",
+	"HiddenTexture": "",
+	"BackIndex": -1,
+	"HiddenIndex": -1,
+	"NumHorizontal": 1,
+	"NumVertical": 1,
+	"Width": 23,
+	"Height": 14,
+	"Thickness": 0.2,
+	"HiddenInHand": false,
+	"UsedWithCardHolders": false,
+	"CanStack": false,
+	"UsePrimaryColorForSide": false,
+	"FrontTextureOverrideExposed": false,
+	"AllowFlippedInStack": false,
+	"MirrorBack": true,
+	"EmissiveFront": false,
+	"Model": "Rounded",
+	"Indices": [ 0 ],
+	"CardNames":
+	{
+	},
+	"CardMetadata":
+	{
+	},
+	"CardTags":
+	{
+	}
 }

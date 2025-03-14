@@ -3,7 +3,6 @@ import { Color } from "@tabletop-playground/api";
 export const players = [
   {
     name: "bluefin-squadron",
-    back: "80BAFE47F441F064D5A344AEE62E71E6",
     template: "300F62A0D44DB4F40DA0E4A328CB3758",
     color: new Color(0.0824, 0.1569, 0.298, 1),
     flagship: "631F8E03FB488C23D1AC3C8270C61C8F",
@@ -14,7 +13,6 @@ export const players = [
   },
   {
     name: "smuggler-red",
-    back: "87F8C9518F4700BB8DAB9CADE119C764",
     template: "7A8D72AAA64A2A976DCE2A9602C41680",
     color: new Color(0.9176, 0.0392, 0.1647, 1),
     flagship: "D1FCC096FA45847655DE3B80A7EBDE39",
@@ -23,7 +21,6 @@ export const players = [
   },
   {
     name: "mollusk-union",
-    back: "60466AB1544E5C552EA642AAAE2453E3",
     template: "19F163665B477FC3B87512BEC2175203",
     color: new Color(0.9804, 0.8039, 0.0039, 1),
     flagship: "05DB99C4744C67CF023531A1AACE80A4",
@@ -34,7 +31,6 @@ export const players = [
   },
   {
     name: "smuggler-white",
-    back: "B9279E8BED4C4A7C660D50BAEC63FC22",
     template: "B0DF59A6A844E2CBF4DF44BE8BE35692",
     color: new Color(1, 1, 1, 1),
     flagship: "23D464F20A40E3DA7AC80D9A80A38A20",
