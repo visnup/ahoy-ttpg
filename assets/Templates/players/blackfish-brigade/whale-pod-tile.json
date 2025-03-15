@@ -3,7 +3,7 @@
 	"GUID": "55424DB91240393F7B31308C77E2464F",
 	"Name": "whale-pod-tile",
 	"Metadata": "",
-	"CollisionType": "Regular",
+	"CollisionType": "Ground",
 	"Friction": 0.7,
 	"Restitution": 0,
 	"Density": 0.5,

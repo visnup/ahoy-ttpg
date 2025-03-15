@@ -50,8 +50,10 @@ refObject.setup = (slot: number) => {
       two.setPosition(ref.getPosition().add(x.multiply(7)));
       const three = ref.takeCards(1, true, 1)!;
       three.setPosition(ref.getPosition().add(x.multiply(14)));
-      placeDeck(player["whale-pod-tile"], false, [16, 8]).freeze();
-      placeShip(player["whale-pod"], [16, 8]);
+      placeDeck(player["whale-pod-tile"], false, [16, 10]).setRotation([
+        0, 0, 0,
+      ]);
+      placeShip(player["whale-pod"], [16, 10], 1)!.setRotation([0, 0, 0]);
       placeShip(player.patrol, [23, 6], 10);
       placeShip(player["veteran-patrol"], [30, 6], 3);
       placeDeck(player["1p"], true, [-16, 0]);
@@ -152,8 +154,9 @@ refObject.setup = (slot: number) => {
       .add(x.multiply(dx))
       .add(y.multiply(dy))
       .add(x.multiply(-columns + 1));
+    let ship;
     for (let i = 0; i < n; i++) {
-      const ship = world.createObjectFromTemplate(
+      ship = world.createObjectFromTemplate(
         id,
         p0
           .add(x.multiply((i % columns) * 2))
@@ -162,6 +165,7 @@ refObject.setup = (slot: number) => {
       ship.setRotation(refObject.getRotation());
       ship.snapToGround();
     }
+    return ship;
   }
 
   function placeDice(n: number, { color }: { color: Color }) {
