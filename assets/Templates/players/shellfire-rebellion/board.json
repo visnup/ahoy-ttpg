@@ -1,0 +1,223 @@
+{
+	"Type": "Card",
+	"GUID": "6167FC50250F95B72E76C1413C3B9482",
+	"Name": "board",
+	"Metadata": "",
+	"CollisionType": "Ground",
+	"Friction": 0.7,
+	"Restitution": 0.3,
+	"Density": 1,
+	"SurfaceType": "Cardboard",
+	"Roughness": 0.6,
+	"Metallic": 0.3,
+	"PrimaryColor":
+	{
+		"R": 255,
+		"G": 255,
+		"B": 255
+	},
+	"SecondaryColor":
+	{
+		"R": 0,
+		"G": 0,
+		"B": 0
+	},
+	"Flippable": true,
+	"AutoStraighten": false,
+	"ShouldSnap": true,
+	"ScriptName": "board.js",
+	"Blueprint": "",
+	"Models": [],
+	"Collision": [],
+	"Lights": [],
+	"SnapPointsGlobal": false,
+	"SnapPoints": [
+		{
+			"X": 5.0999999999999996,
+			"Y": -9.1600000000000001,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": -7.2999999999999998,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": -5.4500000000000002,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": -0.25,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
+		},
+		{
+			"X": 5.0999999999999996,
+			"Y": 1.601,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": -9.5299999999999994,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": -6.5499999999999998,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": -4.7000000000000002,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": -2.1000000000000001,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": -0.22,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
+		},
+		{
+			"X": -2.3999999999999999,
+			"Y": 2.7999999999999998,
+			"Z": 0.10000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0
+		},
+		{
+			"X": -5.6799999999999997,
+			"Y": 10.27,
+			"Z": 0.20000000000000001,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"comrade"
+			]
+		}
+	],
+	"ZoomViewDirection":
+	{
+		"X": 0,
+		"Y": 0,
+		"Z": 0
+	},
+	"GroundAccessibility": "Zoom",
+	"Tags": [],
+	"FrontTexture": "players/shellfire-rebellion/board-back.jpg",
+	"BackTexture": "players/shellfire-rebellion/board.jpg",
+	"HiddenTexture": "",
+	"BackIndex": -2,
+	"HiddenIndex": -1,
+	"NumHorizontal": 1,
+	"NumVertical": 1,
+	"Width": 23,
+	"Height": 14,
+	"Thickness": 0.2,
+	"HiddenInHand": false,
+	"UsedWithCardHolders": false,
+	"CanStack": false,
+	"UsePrimaryColorForSide": false,
+	"FrontTextureOverrideExposed": false,
+	"AllowFlippedInStack": false,
+	"MirrorBack": true,
+	"EmissiveFront": false,
+	"Model": "Rounded",
+	"Indices": [ 0 ],
+	"CardNames":
+	{
+	},
+	"CardMetadata":
+	{
+	},
+	"CardTags":
+	{
+	}
+}
