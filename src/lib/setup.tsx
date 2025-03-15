@@ -25,7 +25,7 @@ type Position = {
 const positions: Position[] = [
   { ...players[0][0] },
   { ...players[1][0], removable: true },
-  { ...players[2][0] },
+  { ...players[2][1] },
   { template: "CD0D5A8D07430CD26FD983914F484812" }, // fame
   { ...players[3][0], removable: true },
 ];

@@ -58,6 +58,7 @@ refObject.setup = (slot: number) => {
       placeFame(4);
       break;
     }
+
     case "bluefin-squadron": {
       placeShip(player.flagship, [-9, 9]);
       placeDice(5, player);
@@ -71,16 +72,7 @@ refObject.setup = (slot: number) => {
       placeFame(0);
       break;
     }
-    case "smuggler-red": {
-      placeShip(player.flagship, [-9, 9]);
-      placeDice(4, player);
-      placeGold();
-      placeDeck(player.reference, true);
-      placeDeck(player.pledge, true, [0, -10]);
-      placeReward();
-      placeFame(1);
-      break;
-    }
+
     case "mollusk-union": {
       placeShip(player.flagship, [-9, 9]);
       placeDice(4, player);
@@ -94,15 +86,52 @@ refObject.setup = (slot: number) => {
           .add([0, 0, 1]),
       );
       ready?.snap();
-      placeShip(player.cutter, [14, 7]);
-      placeShip(player.gunship, [18, 7]);
+      placeShip(player.cutter, [-14, 7]);
+      placeShip(player.gunship, [-18, 7]);
       placeHolder();
-      const plans = placeDeck(player.plans);
+      const plans = placeDeck(player.plans, false, [-16, 0]);
       plans.shuffle();
       plans.deal(2, [slot], false, true);
       placeFame(2);
       break;
     }
+
+    case "shellfire-rebellion": {
+      placeShip(player.flagship, [-9, 9]);
+      placeDice(4, player);
+      placeGold();
+      const ready = placeDeck(player.comrade, false, [10, 9]).takeCards(2);
+      ready?.setPosition(
+        refObject
+          .getAllSnapPoints()
+          .find((s) => s.getTags().includes("comrade"))!
+          .getGlobalPosition()
+          .add([0, 0, 1]),
+      );
+      ready?.snap();
+      placeDeck(player["launcher-board"], true);
+      placeShip(player.range, [16, 6]);
+      placeDeck(player.reference, true, [23, 0]);
+      placeShip(player.launcher, [23, 6], 3);
+      placeHolder();
+      const plans = placeDeck(player.plans, false, [-16, 0]);
+      plans.shuffle();
+      plans.deal(2, [slot], false, true);
+      placeFame(5);
+      break;
+    }
+
+    case "smuggler-red": {
+      placeShip(player.flagship, [-9, 9]);
+      placeDice(4, player);
+      placeGold();
+      placeDeck(player.reference, true);
+      placeDeck(player.pledge, true, [0, -10]);
+      placeReward();
+      placeFame(1);
+      break;
+    }
+
     case "smuggler-white": {
       placeShip(player.flagship, [-9, 9]);
       placeDice(4, player);

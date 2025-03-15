@@ -1,0 +1,88 @@
+{
+	"Type": "Card",
+	"GUID": "FDD99B7E8540B15EE3FA69375061B3B4",
+	"Name": "launcher-board",
+	"Metadata": "",
+	"CollisionType": "Ground",
+	"Friction": 0.7,
+	"Restitution": 0.3,
+	"Density": 1,
+	"SurfaceType": "Cardboard",
+	"Roughness": 0.6,
+	"Metallic": 0.3,
+	"PrimaryColor":
+	{
+		"R": 255,
+		"G": 255,
+		"B": 255
+	},
+	"SecondaryColor":
+	{
+		"R": 0,
+		"G": 0,
+		"B": 0
+	},
+	"Flippable": true,
+	"AutoStraighten": false,
+	"ShouldSnap": true,
+	"ScriptName": "board.js",
+	"Blueprint": "",
+	"Models": [],
+	"Collision": [],
+	"Lights": [],
+	"SnapPointsGlobal": false,
+	"SnapPoints": [
+		{
+			"X": 2.9888910018581178,
+			"Y": -0.017224692900845325,
+			"Z": -0.1000011270763423,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"range"
+			]
+		}
+	],
+	"ZoomViewDirection":
+	{
+		"X": 0,
+		"Y": 0,
+		"Z": 0
+	},
+	"GroundAccessibility": "Zoom",
+	"Tags": [],
+	"FrontTexture": "players/shellfire-rebellion/launcher-board.png",
+	"BackTexture": "",
+	"HiddenTexture": "",
+	"BackIndex": -1,
+	"HiddenIndex": -1,
+	"NumHorizontal": 1,
+	"NumVertical": 1,
+	"Width": 6.3,
+	"Height": 8.8,
+	"Thickness": 0.2,
+	"HiddenInHand": false,
+	"UsedWithCardHolders": false,
+	"CanStack": false,
+	"UsePrimaryColorForSide": false,
+	"FrontTextureOverrideExposed": false,
+	"AllowFlippedInStack": false,
+	"MirrorBack": true,
+	"EmissiveFront": false,
+	"Model": "players/shellfire-rebellion/launcher-board.png",
+	"ShapeAccuracy": 10,
+	"ConvexCollision": true,
+	"Indices": [ 0 ],
+	"CardNames":
+	{
+	},
+	"CardMetadata":
+	{
+	},
+	"CardTags":
+	{
+	}
+}

@@ -46,6 +46,18 @@ export const players = [
       comrade: "2B35CBA5134BD90265F177B9637AC524",
       plans: "2D101611F44D50794ACA05B19F8C7F11",
     },
+    {
+      name: "shellfire-rebellion",
+      template: "6167FC50250F95B72E76C1413C3B9482",
+      color: new Color(0.9804, 0.8039, 0.0039, 1),
+      flagship: "7F42FD5287AA96FA6F216F1186DE8CEB",
+      launcher: "F1707B1D4518B8281331B6C5A4D1964D",
+      "launcher-board": "FDD99B7E8540B15EE3FA69375061B3B4",
+      range: "416563BE80463730423814AC631474AB",
+      comrade: "3C4329B7959CBB08BCDF8CFCE2ACE85B",
+      plans: "E922AB6F7C28D8ABBE044F7EC686F772",
+      reference: "D1E470FB285DCE83F84DC73DD80FEC91",
+    },
   ],
   [
     {
