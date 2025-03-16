@@ -23,7 +23,7 @@ type Position = {
   removable?: true;
 };
 const positions: Position[] = [
-  { ...players[0][0] },
+  { ...players[0][1] },
   { ...players[1][0], removable: true },
   { ...players[2][1] },
   { template: "CD0D5A8D07430CD26FD983914F484812" }, // fame
