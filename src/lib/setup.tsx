@@ -17,20 +17,23 @@ const refPackageId = _refPackageId;
 const origin = new Vector(0, 0, world.getTableHeight() + 0.2);
 
 type Position = {
-  template: string;
-  color?: Color;
-  board?: Card;
+  index: number;
+  options: {
+    template: string;
+    color?: Color;
+    board?: Card;
+  }[];
   removable?: true;
 };
 const positions: Position[] = [
-  { ...players[0][1] },
-  { ...players[1][0], removable: true },
-  { ...players[2][1] },
-  { template: "CD0D5A8D07430CD26FD983914F484812" }, // fame
-  { ...players[3][0], removable: true },
+  { options: [...players[0]], index: 0 },
+  { options: [...players[1]], index: 0, removable: true },
+  { options: [...players[2]], index: 0 },
+  { options: [{ template: "CD0D5A8D07430CD26FD983914F484812" }], index: 0 }, // fame
+  { options: [...players[3]], index: 0, removable: true },
 ];
 const rotated = (positions: Position[]) => {
-  const fame = positions.findIndex((p) => !p.color);
+  const fame = positions.findIndex((p) => !p.options[0].color);
   if (fame <= 0) return positions;
   return [...positions.slice(fame), ...positions.slice(0, fame)];
 };
@@ -39,29 +42,32 @@ export function initialSetup() {
   const { x, y } = world.getAllTables()[0].getSize();
   const r = Math.max(x, y) / 2 - 20;
 
+  while (world.getUIs().length > 0) world.removeUI(0);
+
   // Boards
   for (const [i, position] of rotated(positions).entries()) {
     const a = (i * 2 * Math.PI) / positions.length;
     const p = origin.add([r * Math.cos(a), r * Math.sin(a), 0]);
-    const board = (position.board ??= world.createObjectFromTemplate(
-      position.template,
+    const option = position.options[position.index];
+    const board = (option.board ??= world.createObjectFromTemplate(
+      option.template,
       p,
     ) as Card);
     board.setPosition(p);
     board.setRotation([
       0,
-      (i * 360) / positions.length + ("color" in position ? 180 : 0),
+      (i * 360) / positions.length + ("color" in option ? 180 : 0),
       0,
     ]);
     board.snapToGround();
-    if ("color" in position)
+    if ("color" in option)
       board.setRotation(
         board
           .getRotation()
           .compose(Rotator.fromAxisAngle(board.getRotation().toVector(), 180)),
       );
 
-    if (!("color" in position) && board.getUIs().length === 0) {
+    if (!("color" in option) && board.getUIs().length === 0) {
       const ui = new UIElement();
       ui.position = new Vector(-9.1, 0, 0.2);
       ui.scale = 0.2;
@@ -80,12 +86,14 @@ export function initialSetup() {
   }
 
   // Slot colors
-  const colors = positions.filter((p) => p.color).map((p) => p.color!);
+  const colors = positions
+    .filter((p) => p.options[0].color)
+    .map((p) => p.options[0].color!);
   for (const [i, c] of colors.entries()) world.setSlotColor(i, c);
   for (let i = colors.length; i < 20; i++) world.setSlotColor(i, [0, 0, 0, 1]);
 
   // Removable board
-  const removable = positions.findLast((p) => p.removable)?.board;
+  const removable = positions.findLast((p) => p.removable);
   if (!removable) return;
   const ui = new UIElement();
   ui.position = new Vector(8.1, 0, -0.2);
@@ -97,18 +105,15 @@ export function initialSetup() {
       font="Constantia.ttf"
       fontPackage={refPackageId}
       onClick={() => {
-        positions.splice(
-          positions.findIndex((p) => p.board === removable),
-          1,
-        );
-        removable.destroy();
+        positions.splice(positions.indexOf(removable), 1);
+        removable.options[removable.index].board!.destroy();
         initialSetup();
       }}
     >
       {" Remove "}
     </button>,
   );
-  removable.addUI(ui);
+  removable.options[removable.index].board!.addUI(ui);
 }
 
 function setup(button: Button) {
@@ -146,11 +151,14 @@ function setup(button: Button) {
   }
 
   // 3. Seat players
-  for (const [slot, p] of positions.filter((p) => p.color).entries()) {
-    if (!p.board || !p.board.isFaceUp()) continue;
-    p.board.flip();
-    if ("setup" in p.board && typeof p.board.setup === "function")
-      p.board.setup(slot);
+  for (const [slot, p] of positions
+    .filter((p) => p.options[0].color)
+    .entries()) {
+    const board = p.options[p.index].board;
+    if (!board || !board.isFaceUp()) continue;
+    board.flip();
+    if ("setup" in board && typeof board.setup === "function")
+      board.setup(slot);
   }
 
   // 4. Prepare region stack
