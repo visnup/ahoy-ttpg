@@ -3,6 +3,16 @@ import { Color } from "@tabletop-playground/api";
 export const players = [
   [
     {
+      name: "bluefin-squadron",
+      template: "300F62A0D44DB4F40DA0E4A328CB3758",
+      color: new Color(0.0824, 0.1569, 0.298, 1),
+      flagship: "631F8E03FB488C23D1AC3C8270C61C8F",
+      patrol: "C31FE232614EE2EC6C993698D2D75000",
+      stronghold: "3BD41C49A44EA55E73587480D051E34B",
+      reference: "94030539784BE6D3AC575BA051EEC8A5",
+      "1p": "7EEB28975149DBB01B93DB8D0EEC4B99",
+    },
+    {
       name: "blackfish-brigade",
       template: "A571320FF94B8946841BEEA1709C75D2",
       color: new Color(0.0824, 0.1569, 0.298, 1),
@@ -12,16 +22,6 @@ export const players = [
       patrol: "01B2891C164EEF5B2EE43AA727C8C218",
       "veteran-patrol": "C29AA2CEE9443EC6BB65048280A4DBB1",
       reference: "7892FF27F64A28436245EDA65181B4A9",
-      "1p": "7EEB28975149DBB01B93DB8D0EEC4B99",
-    },
-    {
-      name: "bluefin-squadron",
-      template: "300F62A0D44DB4F40DA0E4A328CB3758",
-      color: new Color(0.0824, 0.1569, 0.298, 1),
-      flagship: "631F8E03FB488C23D1AC3C8270C61C8F",
-      patrol: "C31FE232614EE2EC6C993698D2D75000",
-      stronghold: "3BD41C49A44EA55E73587480D051E34B",
-      reference: "94030539784BE6D3AC575BA051EEC8A5",
       "1p": "7EEB28975149DBB01B93DB8D0EEC4B99",
     },
   ],
