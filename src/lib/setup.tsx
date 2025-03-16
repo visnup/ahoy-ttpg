@@ -123,8 +123,7 @@ function setup(button: Button) {
   const shared = [
     ["F5DD8208484E7508A7C1BF8743C9DF8D", 1], // gold
     ["80E8118F324A3F5C2491FFB2447825C4", 1], // damage
-    // ["618F5B66EB4A60801AF271AA0BDFCCF0", 11], // wealth
-    ["48F9260EAF4C1C73134B17AC44CCD1E0", 2], // damage
+    ["48F9260EAF4C1C73134B17AC44CCD1E0", 2], // damage dice
   ] as const;
   const x = fame.getRotation().compose([0, 90, 0]).toVector();
   const y = fame.getRotation().toVector();
@@ -191,8 +190,6 @@ function setup(button: Button) {
     world.grid.setSnapType(GridSnapType.None);
   });
 
-  // 6. Place wealth dice
-
   // 7. Prepare market
   const market = world.createObjectFromTemplate(
     "3A02A16FF6431BC7F78FBB874CC30870",
@@ -216,8 +213,6 @@ function setup(button: Button) {
     card.setPosition(row[i].getGlobalPosition().add([0, 0, 1]));
     card.snap();
   }
-
-  // 9. Mark fame track
 
   // Remove button
   button.getOwningObject()?.removeUI(0);
