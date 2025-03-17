@@ -7,7 +7,6 @@ import {
   UIElement,
   Vector,
   world,
-  type Button,
   type Color,
 } from "@tabletop-playground/api";
 import { jsxInTTPG, render } from "jsx-in-ttpg";
@@ -20,9 +19,10 @@ type Position = {
   index: number;
   options: {
     template: string;
+    name?: string;
     color?: Color;
-    board?: Card;
   }[];
+  board?: Card;
   removable?: true;
 };
 const positions: Position[] = [
@@ -38,21 +38,50 @@ const rotated = (positions: Position[]) => {
   return [...positions.slice(fame), ...positions.slice(0, fame)];
 };
 
+// @ts-expect-error any
+const Fragment = ({ children }) =>
+  children.length === 1 ? children[0] : children;
+
 export function initialSetup() {
   const { x, y } = world.getAllTables()[0].getSize();
   const r = Math.max(x, y) / 2 - 20;
 
-  while (world.getUIs().length > 0) world.removeUI(0);
+  // Setup button
+  if (!world.getUIs()[0])
+    world.addUI(
+      Object.assign(new UIElement(), {
+        position: origin,
+        scale: 0.2,
+        widget: render(
+          <button
+            size={96}
+            font="Constantia.ttf"
+            fontPackage={refPackageId}
+            onClick={setup}
+          >
+            {" Setup "}
+          </button>,
+        ),
+      }),
+    );
+
+  if (positions.length < world.getUIs().length)
+    while (world.getUIs().length > 1) world.removeUI(1);
+
+  const removable = positions.findLast((p) => p.removable);
 
   // Boards
   for (const [i, position] of rotated(positions).entries()) {
     const a = (i * 2 * Math.PI) / positions.length;
     const p = origin.add([r * Math.cos(a), r * Math.sin(a), 0]);
+
+    // Board
     const option = position.options[position.index];
-    const board = (option.board ??= world.createObjectFromTemplate(
-      option.template,
-      p,
-    ) as Card);
+    const board = (position.board =
+      position.board?.getTemplateId() === option.template
+        ? position.board
+        : (position.board?.destroy?.(),
+          world.createObjectFromTemplate(option.template, p) as Card));
     board.setPosition(p);
     board.setRotation([
       0,
@@ -67,21 +96,46 @@ export function initialSetup() {
           .compose(Rotator.fromAxisAngle(board.getRotation().toVector(), 180)),
       );
 
-    if (!("color" in option) && board.getUIs().length === 0) {
-      const ui = new UIElement();
-      ui.position = new Vector(-9.1, 0, 0.2);
-      ui.scale = 0.2;
-      ui.widget = render(
-        <button
-          size={96}
-          font="Constantia.ttf"
-          fontPackage={refPackageId}
-          onClick={setup}
-        >
-          {" Setup "}
-        </button>,
+    // Options
+    if (!world.getUIs()[i] && "color" in option) {
+      const r = Math.max(x, y) / 2 - 30;
+      const p = origin.add([r * Math.cos(a), r * Math.sin(a), 0]);
+      world.addUI(
+        Object.assign(new UIElement(), {
+          position: p,
+          rotation: new Rotator(0, (i * 360) / positions.length + 180, 0),
+          scale: 0.2,
+          widget: render(
+            <horizontalbox gap={20}>
+              <Fragment>
+                {position.options.map((option, i) => (
+                  <imagebutton
+                    src={`players/${option.name}/fame.jpg`}
+                    srcPackage={refPackageId}
+                    width={150}
+                    onClick={() => {
+                      position.index = i;
+                      initialSetup();
+                    }}
+                  />
+                ))}
+                {removable === position && (
+                  <imagebutton
+                    src="damage.jpg"
+                    srcPackage={refPackageId}
+                    width={150}
+                    onClick={() => {
+                      positions.splice(positions.indexOf(removable), 1);
+                      removable.board?.destroy();
+                      initialSetup();
+                    }}
+                  />
+                )}
+              </Fragment>
+            </horizontalbox>,
+          ),
+        }),
       );
-      board.addUI(ui);
     }
   }
 
@@ -91,32 +145,9 @@ export function initialSetup() {
     .map((p) => p.options[0].color!);
   for (const [i, c] of colors.entries()) world.setSlotColor(i, c);
   for (let i = colors.length; i < 20; i++) world.setSlotColor(i, [0, 0, 0, 1]);
-
-  // Removable board
-  const removable = positions.findLast((p) => p.removable);
-  if (!removable) return;
-  const ui = new UIElement();
-  ui.position = new Vector(8.1, 0, -0.2);
-  ui.rotation = new Rotator(180, 180, 0);
-  ui.scale = 0.2;
-  ui.widget = render(
-    <button
-      size={48}
-      font="Constantia.ttf"
-      fontPackage={refPackageId}
-      onClick={() => {
-        positions.splice(positions.indexOf(removable), 1);
-        removable.options[removable.index].board!.destroy();
-        initialSetup();
-      }}
-    >
-      {" Remove "}
-    </button>,
-  );
-  removable.options[removable.index].board!.addUI(ui);
 }
 
-function setup(button: Button) {
+function setup() {
   const fame = world.getObjectByTemplateName("fame")!;
 
   // 1. Collect shared pieces
@@ -153,7 +184,7 @@ function setup(button: Button) {
   for (const [slot, p] of positions
     .filter((p) => p.options[0].color)
     .entries()) {
-    const board = p.options[p.index].board;
+    const board = p.board;
     if (!board || !board.isFaceUp()) continue;
     board.flip();
     if ("setup" in board && typeof board.setup === "function")
@@ -214,6 +245,6 @@ function setup(button: Button) {
     card.snap();
   }
 
-  // Remove button
-  button.getOwningObject()?.removeUI(0);
+  // Remove buttons
+  while (world.getUIs().length > 0) world.removeUI(0);
 }
