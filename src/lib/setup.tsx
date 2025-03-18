@@ -44,7 +44,7 @@ const Fragment = ({ children }) =>
 
 export function initialSetup() {
   const { x, y } = world.getAllTables()[0].getSize();
-  const r = Math.max(x, y) / 2 - 20;
+  const r = Math.max(x, y) / 2 - 19;
 
   // Setup button
   if (!world.getUIs()[0])
