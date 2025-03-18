@@ -148,6 +148,9 @@ export function initialSetup() {
 }
 
 function setup() {
+  // Remove buttons
+  while (world.getUIs().length > 0) world.removeUI(0);
+
   const fame = world.getObjectByTemplateName("fame")!;
 
   // 1. Collect shared pieces
@@ -244,7 +247,4 @@ function setup() {
     card.setPosition(row[i].getGlobalPosition().add([0, 0, 1]));
     card.snap();
   }
-
-  // Remove buttons
-  while (world.getUIs().length > 0) world.removeUI(0);
 }
