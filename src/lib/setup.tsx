@@ -38,10 +38,6 @@ const rotated = (positions: Position[]) => {
   return [...positions.slice(fame), ...positions.slice(0, fame)];
 };
 
-// @ts-expect-error any
-const Fragment = ({ children }) =>
-  children.length === 1 ? children[0] : children;
-
 export function initialSetup() {
   const { x, y } = world.getAllTables()[0].getSize();
   const r = Math.max(x, y) / 2 - 19;
@@ -107,31 +103,29 @@ export function initialSetup() {
           scale: 0.2,
           widget: render(
             <horizontalbox gap={20}>
-              <Fragment>
-                {position.options.map((option, i) => (
-                  <imagebutton
-                    src={`players/${option.name}/fame.jpg`}
-                    srcPackage={refPackageId}
-                    width={150}
-                    onClick={() => {
-                      position.index = i;
-                      initialSetup();
-                    }}
-                  />
-                ))}
-                {removable === position && (
-                  <imagebutton
-                    src="damage.jpg"
-                    srcPackage={refPackageId}
-                    width={150}
-                    onClick={() => {
-                      positions.splice(positions.indexOf(removable), 1);
-                      removable.board?.destroy();
-                      initialSetup();
-                    }}
-                  />
-                )}
-              </Fragment>
+              {position.options.map((option, i) => (
+                <imagebutton
+                  src={`players/${option.name}/fame.jpg`}
+                  srcPackage={refPackageId}
+                  width={150}
+                  onClick={() => {
+                    position.index = i;
+                    initialSetup();
+                  }}
+                />
+              ))}
+              {removable === position && (
+                <imagebutton
+                  src="damage.jpg"
+                  srcPackage={refPackageId}
+                  width={150}
+                  onClick={() => {
+                    positions.splice(positions.indexOf(removable), 1);
+                    removable.board?.destroy();
+                    initialSetup();
+                  }}
+                />
+              )}
             </horizontalbox>,
           ),
         }),
