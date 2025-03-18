@@ -1,6 +1,6 @@
 {
 	"Type": "Card",
-	"GUID": "300F62A0D44DB4F40DA0E4A328CB3758",
+	"GUID": "0306E37155D2D67DFD75364E614B6497",
 	"Name": "board",
 	"Metadata": "",
 	"CollisionType": "Ground",
@@ -34,8 +34,8 @@
 	"SnapPoints": [
 		{
 			"X": 5.0999999999999996,
-			"Y": -10.1,
-			"Z": 0.20000000000000001,
+			"Y": -9.7799999999999994,
+			"Z": 0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -48,8 +48,8 @@
 		},
 		{
 			"X": 5.0999999999999996,
-			"Y": -8.1999999999999993,
-			"Z": 0.20000000000000001,
+			"Y": -7.9299999999999997,
+			"Z": 0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -62,8 +62,8 @@
 		},
 		{
 			"X": 5.0999999999999996,
-			"Y": -6.4000000000000004,
-			"Z": 0.20000000000000001,
+			"Y": -6.0800000000000001,
+			"Z": 0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -76,8 +76,8 @@
 		},
 		{
 			"X": 5.0999999999999996,
-			"Y": -4.5,
-			"Z": 0.20000000000000001,
+			"Y": -3.2000000000000002,
+			"Z": 0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -90,8 +90,8 @@
 		},
 		{
 			"X": 5.0999999999999996,
-			"Y": -2.0499999999999998,
-			"Z": 0.20000000000000001,
+			"Y": -1.3500000000000001,
+			"Z": 0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -104,8 +104,8 @@
 		},
 		{
 			"X": 5.0999999999999996,
-			"Y": -0.23999999999999999,
-			"Z": 0.20000000000000001,
+			"Y": 1.3200000000000001,
+			"Z": 0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -118,8 +118,8 @@
 		},
 		{
 			"X": 5.0999999999999996,
-			"Y": 2.75,
-			"Z": 0.20000000000000001,
+			"Y": 3.1699999999999999,
+			"Z": 0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -132,22 +132,8 @@
 		},
 		{
 			"X": -2.3999999999999999,
-			"Y": -10.050000000000001,
-			"Z": 0.20000000000000001,
-			"Range": 3,
-			"SnapRotation": 0,
-			"RotationOffset": 0,
-			"Shape": 0,
-			"FlipValidity": 0,
-			"Tags": [
-				"action",
-				"damage"
-			]
-		},
-		{
-			"X": -2.3999999999999999,
-			"Y": -8.1999999999999993,
-			"Z": 0.20000000000000001,
+			"Y": -9.1400000000000006,
+			"Z": 0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
@@ -209,8 +195,8 @@
 	},
 	"GroundAccessibility": "Zoom",
 	"Tags": [],
-	"FrontTexture": "players/bluefin-squadron/board-back.jpg",
-	"BackTexture": "players/bluefin-squadron/board.jpg",
+	"FrontTexture": "players/leviathan/board-back.jpg",
+	"BackTexture": "players/leviathan/board.jpg",
 	"HiddenTexture": "",
 	"BackIndex": -2,
 	"HiddenIndex": -1,

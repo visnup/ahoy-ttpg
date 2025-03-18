@@ -141,8 +141,8 @@ export function initialSetup() {
 
   // Slot colors
   const colors = positions
-    .filter((p) => p.options[0].color)
-    .map((p) => p.options[0].color!);
+    .filter((p) => p.options[p.index].color)
+    .map((p) => p.options[p.index].color!);
   for (const [i, c] of colors.entries()) world.setSlotColor(i, c);
   for (let i = colors.length; i < 20; i++) world.setSlotColor(i, [0, 0, 0, 1]);
 }

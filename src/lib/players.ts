@@ -26,6 +26,17 @@ const bluefinSquadron = {
   "1p": _1p,
 } as const;
 
+const leviathan = {
+  name: "leviathan",
+  template: "0306E37155D2D67DFD75364E614B6497",
+  tile: "7D2EC606D405C1D09CAC24598622A3F7",
+  color: new Color(0.204, 0.663, 0.212, 1),
+  head: "24DB2D4A7143C7A3AB537CB34600AD8E",
+  body: "6D11CDACC44B568CB98AFAAA9361831E",
+  appetite: "0834FA095C4985EF7B048295C03AFAF6",
+  evolution: "D17B49B7304A6773415E53A765986425",
+} as const;
+
 const molluskUnion = {
   name: "mollusk-union",
   template: "19F163665B477FC3B87512BEC2175203",
@@ -70,7 +81,7 @@ const smugglerWhite = {
 
 export const players = [
   [bluefinSquadron, blackfishBrigade],
-  [smugglerRed],
+  [smugglerRed, leviathan],
   [molluskUnion, shellfireRebellion],
-  [smugglerWhite],
+  [smugglerWhite, leviathan],
 ] as const;

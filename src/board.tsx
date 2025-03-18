@@ -75,6 +75,28 @@ refObject.setup = (slot: number) => {
       break;
     }
 
+    case "leviathan": {
+      const tile = placeDeck(player.tile, true, [0, 10.5]);
+      const black = [new Color(0, 0, 0)];
+      placeReward(black, tile);
+      placeReward(black, tile);
+      placeShip(player.head, [-9, 15], 4);
+      placeShip(player.body, [16, 6], 12);
+      placeDice(4, player, 15);
+      placeGold(1, 15);
+      placeHolder();
+      const evolution = placeDeck(player.evolution, false, [-16, 0]);
+      evolution.shuffle();
+      evolution.deal(2, [slot], false, true);
+      const appetite = placeDeck(player.appetite, false);
+      appetite.shuffle();
+      const revealed = appetite.takeCards(1, true, 1)!;
+      revealed.setPosition(appetite.getPosition().add(x.multiply(7)));
+      revealed.flip();
+      placeFame(6);
+      break;
+    }
+
     case "mollusk-union": {
       placeShip(player.flagship, [-9, 9]);
       placeDice(4, player);
@@ -159,7 +181,7 @@ refObject.setup = (slot: number) => {
       ship = world.createObjectFromTemplate(
         id,
         p0
-          .add(x.multiply((i % columns) * 2))
+          .add(x.multiply((i % columns) * 2.2))
           .add(y.multiply(Math.floor(i / columns) * 1.2)),
       )!;
       ship.setRotation(refObject.getRotation());
@@ -168,14 +190,14 @@ refObject.setup = (slot: number) => {
     return ship;
   }
 
-  function placeDice(n: number, { color }: { color: Color }) {
+  function placeDice(n: number, { color }: { color: Color }, dy = 9) {
     for (let i = 0; i < n; i++) {
       const dice = world.createObjectFromTemplate(
         "D3AFC9C59445D790B3A437A515B48423",
         p
           .add([0, 0, 2])
           .add(x.multiply(-5 + 2 * i))
-          .add(y.multiply(9)),
+          .add(y.multiply(dy)),
       ) as Dice;
       dice.setPrimaryColor(color);
       if (color.r + color.g + color.b < 1.5)
@@ -185,9 +207,9 @@ refObject.setup = (slot: number) => {
     }
   }
 
-  function placeGold(n = 1) {
+  function placeGold(n = 1, dy = 9) {
     const piece = gold.takeCards(n);
-    piece?.setPosition(p.add([0, 0, 1]).add(x.multiply(7)).add(y.multiply(9)));
+    piece?.setPosition(p.add([0, 0, 1]).add(x.multiply(7)).add(y.multiply(dy)));
     piece?.setRotation(refObject.getRotation());
     piece?.snapToGround();
     return piece;
@@ -208,17 +230,22 @@ refObject.setup = (slot: number) => {
     return deck;
   }
 
-  function placeReward() {
-    const start = refObject
+  function placeReward(
+    colors = [new Color(0, 0, 0, 1), new Color(1, 1, 1, 1)],
+    board = refObject,
+  ) {
+    const start = board
       .getAllSnapPoints()
-      .find((s) => s.getTags().includes("reward:start"))!;
-    return [new Color(0, 0, 0, 1), new Color(1, 1, 1, 1)].map((color) => {
+      .find(
+        (s) => s.getTags().includes("reward:start") && !s.getSnappedObject(),
+      )!;
+    return colors.map((color) => {
       const cube = world.createObjectFromTemplate(
         "FF60F606CD4B187A377E00BD275848DF",
         start.getGlobalPosition().add([0, 0, 3]),
       );
       cube?.setPrimaryColor(color);
-      cube?.setRotation(refObject.getRotation());
+      cube?.setRotation(board.getRotation());
       cube?.snapToGround();
       return cube;
     });

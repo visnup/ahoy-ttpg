@@ -1,7 +1,7 @@
 {
 	"Type": "Card",
-	"GUID": "300F62A0D44DB4F40DA0E4A328CB3758",
-	"Name": "board",
+	"GUID": "7D2EC606D405C1D09CAC24598622A3F7",
+	"Name": "tile",
 	"Metadata": "",
 	"CollisionType": "Ground",
 	"Friction": 0.7,
@@ -33,171 +33,122 @@
 	"SnapPointsGlobal": false,
 	"SnapPoints": [
 		{
-			"X": 5.0999999999999996,
-			"Y": -10.1,
-			"Z": 0.20000000000000001,
+			"X": -0.75,
+			"Y": 4.7699999999999996,
+			"Z": -0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
+				"reward",
+				"reward:start"
 			]
 		},
 		{
-			"X": 5.0999999999999996,
-			"Y": -8.1999999999999993,
-			"Z": 0.20000000000000001,
+			"X": -0.75,
+			"Y": 3.02,
+			"Z": -0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
+				"reward"
 			]
 		},
 		{
-			"X": 5.0999999999999996,
-			"Y": -6.4000000000000004,
-			"Z": 0.20000000000000001,
+			"X": -0.75,
+			"Y": 1.26,
+			"Z": -0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
+				"reward"
 			]
 		},
 		{
-			"X": 5.0999999999999996,
-			"Y": -4.5,
-			"Z": 0.20000000000000001,
+			"X": -0.75,
+			"Y": -0.47999999999999998,
+			"Z": -0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
+				"reward"
 			]
 		},
 		{
-			"X": 5.0999999999999996,
-			"Y": -2.0499999999999998,
-			"Z": 0.20000000000000001,
+			"X": -0.75,
+			"Y": -2.8399999999999999,
+			"Z": -0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
+				"reward",
+				"reward:start"
 			]
 		},
 		{
-			"X": 5.0999999999999996,
-			"Y": -0.23999999999999999,
-			"Z": 0.20000000000000001,
+			"X": -0.75,
+			"Y": -4.5999999999999996,
+			"Z": -0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
+				"reward"
 			]
 		},
 		{
-			"X": 5.0999999999999996,
-			"Y": 2.75,
-			"Z": 0.20000000000000001,
+			"X": -0.75,
+			"Y": -6.3600000000000003,
+			"Z": -0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
+				"reward"
 			]
 		},
 		{
-			"X": -2.3999999999999999,
-			"Y": -10.050000000000001,
-			"Z": 0.20000000000000001,
+			"X": -0.75,
+			"Y": -8.0899999999999999,
+			"Z": -0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
+				"reward"
 			]
 		},
 		{
-			"X": -2.3999999999999999,
-			"Y": -8.1999999999999993,
-			"Z": 0.20000000000000001,
+			"X": -0.75,
+			"Y": -9.8499999999999996,
+			"Z": -0.10000000000000001,
 			"Range": 3,
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action",
-				"damage"
-			]
-		},
-		{
-			"X": -2.3999999999999999,
-			"Y": -4.9299999999999997,
-			"Z": 0.20000000000000001,
-			"Range": 3,
-			"SnapRotation": 0,
-			"RotationOffset": 0,
-			"Shape": 0,
-			"FlipValidity": 0,
-			"Tags": [
-				"action",
-				"damage"
-			]
-		},
-		{
-			"X": -2.3999999999999999,
-			"Y": -0.92000000000000004,
-			"Z": 0.20000000000000001,
-			"Range": 3,
-			"SnapRotation": 0,
-			"RotationOffset": 0,
-			"Shape": 0,
-			"FlipValidity": 0,
-			"Tags": [
-				"action",
-				"damage"
-			]
-		},
-		{
-			"X": -2.3999999999999999,
-			"Y": 2.75,
-			"Z": 0.20000000000000001,
-			"Range": 3,
-			"SnapRotation": 0,
-			"RotationOffset": 0,
-			"Shape": 0,
-			"FlipValidity": 0,
-			"Tags": [
-				"action",
-				"damage"
+				"reward"
 			]
 		}
 	],
@@ -209,15 +160,15 @@
 	},
 	"GroundAccessibility": "Zoom",
 	"Tags": [],
-	"FrontTexture": "players/bluefin-squadron/board-back.jpg",
-	"BackTexture": "players/bluefin-squadron/board.jpg",
+	"FrontTexture": "players/leviathan/tile.png",
+	"BackTexture": "",
 	"HiddenTexture": "",
-	"BackIndex": -2,
+	"BackIndex": 0,
 	"HiddenIndex": -1,
 	"NumHorizontal": 1,
 	"NumVertical": 1,
 	"Width": 23,
-	"Height": 14,
+	"Height": 6.87,
 	"Thickness": 0.2,
 	"HiddenInHand": false,
 	"UsedWithCardHolders": false,
@@ -227,7 +178,9 @@
 	"AllowFlippedInStack": false,
 	"MirrorBack": true,
 	"EmissiveFront": false,
-	"Model": "Rounded",
+	"Model": "players/leviathan/tile.png",
+	"ShapeAccuracy": 10,
+	"ConvexCollision": true,
 	"Indices": [ 0 ],
 	"CardNames":
 	{

@@ -4,6 +4,8 @@ bluefin squadron 15284C
 smuggler red EA0A2A
 mollusk union FACD01
 smuggler white FFFFFF
+leviathan 34A936
+coral cap pirates
 
 dimensions
 ----------
