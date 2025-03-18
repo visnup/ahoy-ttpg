@@ -17,7 +17,7 @@ const origin = new Vector(0, 0, world.getTableHeight() + 0.2);
 
 type Position = {
   index: number;
-  options: {
+  options: readonly {
     template: string;
     name?: string;
     color?: Color;
@@ -26,11 +26,11 @@ type Position = {
   removable?: true;
 };
 const positions: Position[] = [
-  { options: [...players[0]], index: 0 },
-  { options: [...players[1]], index: 0, removable: true },
-  { options: [...players[2]], index: 0 },
+  { options: players[0], index: 0 },
+  { options: players[1], index: 0, removable: true },
+  { options: players[2], index: 0 },
   { options: [{ template: "CD0D5A8D07430CD26FD983914F484812" }], index: 0 }, // fame
-  { options: [...players[3]], index: 0, removable: true },
+  { options: players[3], index: 0, removable: true },
 ];
 const rotated = (positions: Position[]) => {
   const fame = positions.findIndex((p) => !p.options[0].color);
