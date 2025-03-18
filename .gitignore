@@ -3,8 +3,6 @@
 /node_modules/
 /wip/
 
-/assets/Textures/players/coral-cap-pirates/
-
 # production
 /build
 /lib

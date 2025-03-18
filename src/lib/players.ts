@@ -26,6 +26,12 @@ const bluefinSquadron = {
   "1p": _1p,
 } as const;
 
+const coralCapPirates = {
+  name: "coral-cap-pirates",
+  template: "A7430BF8804AF2E11CEA33078C77BB47",
+  color: new Color(0.91, 0.561, 0.722, 1),
+} as const;
+
 const leviathan = {
   name: "leviathan",
   template: "0306E37155D2D67DFD75364E614B6497",
@@ -81,7 +87,7 @@ const smugglerWhite = {
 
 export const players = [
   [bluefinSquadron, blackfishBrigade],
-  [smugglerRed, leviathan],
+  [smugglerRed, leviathan, coralCapPirates],
   [molluskUnion, shellfireRebellion],
-  [smugglerWhite, leviathan],
+  [smugglerWhite, leviathan, coralCapPirates],
 ] as const;

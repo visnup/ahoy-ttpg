@@ -5,7 +5,7 @@ smuggler red EA0A2A
 mollusk union FACD01
 smuggler white FFFFFF
 leviathan 34A936
-coral cap pirates
+coral cap pirates E88FB8
 
 dimensions
 ----------
