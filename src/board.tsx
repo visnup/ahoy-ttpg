@@ -41,6 +41,13 @@ refObject.setup = (slot: number) => {
     .flat()
     .find((p) => p.template === refObject.getTemplateId());
   switch (player?.name) {
+    case "coral-cap-pirates": {
+      placeDice(4, player);
+      placeGold();
+      placeFame(7);
+      break;
+    }
+
     case "blackfish-brigade": {
       placeShip(player.flagship, [-9, 9]);
       placeDice(5, player);
