@@ -50,7 +50,7 @@ const molluskUnion = {
 
 const shellfireRebellion = {
   name: "shellfire-rebellion",
-  template: "6167FC50250F95B72E76C113C3B9482",
+  template: "6167FC50250F95B72E76C1413C3B9482",
   color: new Color(0.9804, 0.8039, 0.0039, 1),
   flagship: "7F42FD5287AA96FA6F216F1186DE8CEB",
   launcher: "F1707B1D4518B8281331B6C5A4D1964D",
