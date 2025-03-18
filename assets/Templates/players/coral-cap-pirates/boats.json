@@ -1,0 +1,118 @@
+{
+	"Type": "Card",
+	"GUID": "77F97DAB89437A36885A79B28A563E17",
+	"Name": "boats",
+	"Metadata": "",
+	"CollisionType": "Ground",
+	"Friction": 0.7,
+	"Restitution": 0,
+	"Density": 0.5,
+	"SurfaceType": "Cardboard",
+	"Roughness": 1,
+	"Metallic": 0,
+	"PrimaryColor":
+	{
+		"R": 255,
+		"G": 255,
+		"B": 255
+	},
+	"SecondaryColor":
+	{
+		"R": 0,
+		"G": 0,
+		"B": 0
+	},
+	"Flippable": true,
+	"AutoStraighten": false,
+	"ShouldSnap": true,
+	"ScriptName": "",
+	"Blueprint": "",
+	"Models": [],
+	"Collision": [],
+	"Lights": [],
+	"SnapPointsGlobal": false,
+	"SnapPoints": [
+		{
+			"X": -1.7,
+			"Y": 2.8399999999999999,
+			"Z": -0.122,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"job"
+			]
+		},
+		{
+			"X": -1.7,
+			"Y": -0.73999999999999999,
+			"Z": -0.122,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"job"
+			]
+		},
+		{
+			"X": -1.7,
+			"Y": -4.29,
+			"Z": -0.122,
+			"Range": 3,
+			"SnapRotation": 0,
+			"RotationOffset": 0,
+			"Shape": 0,
+			"FlipValidity": 0,
+			"Tags": [
+				"job"
+			]
+		}
+	],
+	"ZoomViewDirection":
+	{
+		"X": 0,
+		"Y": 0,
+		"Z": 0
+	},
+	"GroundAccessibility": "Zoom",
+	"Tags": [],
+	"FrontTexture": "players/coral-cap-pirates/boats.jpg",
+	"BackTexture": "players/coral-cap-pirates/boats-back.jpg",
+	"HiddenTexture": "",
+	"BackIndex": -3,
+	"HiddenIndex": -3,
+	"NumHorizontal": 3,
+	"NumVertical": 2,
+	"Width": 12,
+	"Height": 7,
+	"Thickness": 0.05,
+	"HiddenInHand": false,
+	"UsedWithCardHolders": false,
+	"CanStack": false,
+	"UsePrimaryColorForSide": false,
+	"FrontTextureOverrideExposed": false,
+	"AllowFlippedInStack": false,
+	"MirrorBack": true,
+	"EmissiveFront": false,
+	"Model": "Rounded",
+	"Indices": [ 0, 1, 2, 3, 4, 5 ],
+	"CardNames":
+	{
+	},
+	"CardMetadata":
+	{
+		"0": "skull",
+		"1": "compass",
+		"2": "tree",
+		"3": "swords",
+		"4": "fish",
+		"5": "parrot"
+	},
+	"CardTags":
+	{
+	}
+}

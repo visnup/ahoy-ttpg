@@ -42,8 +42,25 @@ refObject.setup = (slot: number) => {
     .find((p) => p.template === refObject.getTemplateId());
   switch (player?.name) {
     case "coral-cap-pirates": {
+      placeShip(player.flagship, [-9, 9]);
       placeDice(4, player);
       placeGold();
+      placeDeck(player.jobs, false, [10, 9]).shuffle();
+      const left = placeDeck(player.boats, true, [-19, 9]);
+      const right = left.takeCards(3)!;
+      right.setPosition(left.getPosition().add(x.multiply(38)));
+      for (const deck of [left, right])
+        for (let j = 0; j < 3; j++) {
+          const card = j ? deck.takeCards(1)! : deck;
+          card.setPosition(deck.getPosition().add(y.multiply(-j * 8)));
+          const suit = card
+            .getCardDetails(0)!
+            .metadata.trim() as keyof typeof player.frigates;
+          placeShip(player.frigates[suit], [
+            (deck === left ? -19 : 19) + 4.7,
+            11.2 - j * 8,
+          ]);
+        }
       placeFame(7);
       break;
     }
