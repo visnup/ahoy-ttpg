@@ -200,7 +200,7 @@ refObject.setup = (slot: number) => {
           .add(y.multiply(dy)),
       ) as Dice;
       dice.setPrimaryColor(color);
-      if (color.r + color.g + color.b < 1.5)
+      if (0.299 * color.r + 0.587 * color.g + 0.114 * color.b < 0.5)
         dice.setSecondaryColor([1, 1, 1, 1]);
       dice.setRotation(refObject.getRotation());
       dice.snapToGround();
