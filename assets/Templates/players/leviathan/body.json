@@ -39,15 +39,15 @@
 			},
 			"Scale":
 			{
-				"X": 0.82018999999999997,
-				"Y": 2,
+				"X": 1,
+				"Y": 2.5,
 				"Z": 0.96999999999999997
 			},
 			"Rotation":
 			{
 				"X": 0,
 				"Y": 90,
-				"Z": 0
+				"Z": 180
 			},
 			"Texture": "players/leviathan/body.png",
 			"NormalMap": "",

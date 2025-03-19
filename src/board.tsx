@@ -78,7 +78,7 @@ refObject.setup = (slot: number) => {
         0, 0, 0,
       ]);
       placeShip(player["whale-pod"], [16, 10], 1)!.setRotation([0, 0, 0]);
-      placeShip(player.patrol, [23, 6], 10);
+      placeShip(player.patrol, [23.2, 6], 10);
       placeShip(player["veteran-patrol"], [30, 6], 3);
       placeDeck(player["1p"], true, [-16, 0]);
       placeFame(4);
@@ -92,7 +92,7 @@ refObject.setup = (slot: number) => {
       const ref = placeDeck(player.reference, true);
       const two = ref.takeCards(1, true, 1)!;
       two.setPosition(ref.getPosition().add(x.multiply(7)));
-      placeShip(player.patrol, [16, 6], 10);
+      placeShip(player.patrol, [16.2, 6], 10);
       placeShip(player.stronghold, [23, 6], 3);
       placeDeck(player["1p"], true, [-16, 0]);
       placeFame(0);
@@ -104,8 +104,8 @@ refObject.setup = (slot: number) => {
       const black = [new Color(0, 0, 0)];
       placeReward(black, tile);
       placeReward(black, tile);
-      placeShip(player.head, [-9, 15], 4);
-      placeShip(player.body, [16, 6], 12);
+      placeShip(player.head, [-9, 14], 4);
+      placeShip(player.body, [15.5, 6], 12);
       placeDice(4, player, 15);
       placeGold(1, 15);
       placeHolder();
@@ -200,14 +200,19 @@ refObject.setup = (slot: number) => {
       .add(x.multiply(dx))
       .add(y.multiply(dy))
       .add(x.multiply(-columns + 1));
-    let ship;
+    let ship, w, h;
     for (let i = 0; i < n; i++) {
       ship = world.createObjectFromTemplate(
         id,
         p0
-          .add(x.multiply((i % columns) * 2.2))
-          .add(y.multiply(Math.floor(i / columns) * 1.2)),
+          .add(x.multiply((i % columns) * (w ?? 2.2)))
+          .add(y.multiply(Math.floor(i / columns) * (h ?? 1.2))),
       )!;
+      if (!w) {
+        const { x, y } = ship.getSize();
+        w = y + 0.2;
+        h = x + 0.2;
+      }
       ship.setRotation(refObject.getRotation());
       ship.snapToGround();
     }
