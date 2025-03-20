@@ -2,12 +2,14 @@ import {
   refPackageId as _refPackageId,
   Card,
   Dice,
+  globalEvents,
   GridSnapType,
   Rotator,
   UIElement,
   Vector,
   world,
   type Color,
+  type Player,
 } from "@tabletop-playground/api";
 import { jsxInTTPG, render } from "jsx-in-ttpg";
 import { players } from "./players";
@@ -32,16 +34,34 @@ const positions: Position[] = [
   { options: [{ template: "CD0D5A8D07430CD26FD983914F484812" }], index: 0 }, // fame
   { options: players[3], index: 0, removable: true },
 ];
-const rotated = (positions: Position[]) => {
+// Rotated so Fame is oriented along the world grid
+function rotated(positions: Position[]) {
   const fame = positions.findIndex((p) => !p.options[0].color);
   if (fame <= 0) return positions;
   return [...positions.slice(fame), ...positions.slice(0, fame)];
-};
+}
+// Boards
+function boards(positions: Position[]) {
+  return positions.filter((p) => p.options[0].color);
+}
+
+function getRadialPosition(i: number, dr = 19) {
+  const { x, y } = world.getAllTables()[0].getSize();
+  const r = Math.min(x, y) / 2 - dr;
+  const a = (i * 2 * Math.PI) / positions.length;
+  return origin.add([r * Math.cos(a), r * Math.sin(a), 0]);
+}
+
+globalEvents.onPlayerSwitchedSlots.add((player: Player) => {
+  const board = boards(positions)[player.getSlot()].board!;
+  const p = Vector.lerp(origin, board.getPosition(), 2).add([0, 0, 50]);
+  player.setPositionAndRotation(
+    p,
+    p.findLookAtRotation(Vector.lerp(origin, board.getPosition(), 0.5)),
+  );
+});
 
 export function initialSetup() {
-  const { x, y } = world.getAllTables()[0].getSize();
-  const r = Math.max(x, y) / 2 - 19;
-
   // Setup button
   if (!world.getUIs()[0])
     world.addUI(
@@ -61,6 +81,7 @@ export function initialSetup() {
       }),
     );
 
+  // Reset options if positions got reduced
   if (positions.length < world.getUIs().length)
     while (world.getUIs().length > 1) world.removeUI(1);
 
@@ -68,8 +89,7 @@ export function initialSetup() {
 
   // Boards
   for (const [i, position] of rotated(positions).entries()) {
-    const a = (i * 2 * Math.PI) / positions.length;
-    const p = origin.add([r * Math.cos(a), r * Math.sin(a), 0]);
+    const p = getRadialPosition(i);
 
     // Board
     const option = position.options[position.index];
@@ -94,11 +114,9 @@ export function initialSetup() {
 
     // Options
     if (!world.getUIs()[i] && "color" in option) {
-      const r = Math.max(x, y) / 2 - 30;
-      const p = origin.add([r * Math.cos(a), r * Math.sin(a), 0]);
       world.addUI(
         Object.assign(new UIElement(), {
-          position: p,
+          position: getRadialPosition(i, 28),
           rotation: new Rotator(0, (i * 360) / positions.length + 180, 0),
           scale: 0.2,
           widget: render(
@@ -134,9 +152,7 @@ export function initialSetup() {
   }
 
   // Slot colors
-  const colors = positions
-    .filter((p) => p.options[p.index].color)
-    .map((p) => p.options[p.index].color!);
+  const colors = boards(positions).map((p) => p.options[p.index].color!);
   for (const [i, c] of colors.entries()) world.setSlotColor(i, c);
   for (let i = colors.length; i < 20; i++) world.setSlotColor(i, [0, 0, 0, 1]);
 }
@@ -178,14 +194,37 @@ function setup() {
   }
 
   // 3. Seat players
-  for (const [slot, p] of positions
-    .filter((p) => p.options[0].color)
-    .entries()) {
+  for (const [slot, p] of positions.entries()) {
+    if (!p.options[0].color) continue;
     const board = p.board;
     if (!board || !board.isFaceUp()) continue;
     board.flip();
     if ("setup" in board && typeof board.setup === "function")
       board.setup(slot);
+  }
+  // Sit buttons
+  for (const [i, p] of rotated(positions).entries()) {
+    if (!p.options[0].color) continue;
+    world.addUI(
+      Object.assign(new UIElement(), {
+        position: getRadialPosition(i, 2.5),
+        rotation: new Rotator(0, (i * 360) / positions.length + 180, 0),
+        scale: 0.2,
+        widget: render(
+          <button
+            size={48}
+            font="Constantia.ttf"
+            fontPackage={refPackageId}
+            color={p.options[p.index].color}
+            onClick={(_, player) =>
+              player.switchSlot(boards(positions).indexOf(p))
+            }
+          >
+            {" Sit "}
+          </button>,
+        ),
+      }),
+    );
   }
 
   // 4. Prepare region stack
