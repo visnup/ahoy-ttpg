@@ -56,10 +56,12 @@ refObject.setup = (slot: number) => {
           const suit = card
             .getCardDetails(0)!
             .metadata.trim() as keyof typeof player.frigates;
-          placeShip(player.frigates[suit], [
-            (deck === left ? -19 : 19) + 4.7,
-            11.2 - j * 8,
-          ]);
+          process.nextTick(() => {
+            placeShip(player.frigates[suit], [
+              (deck === left ? -19 : 19) + 4.7,
+              11.2 - j * 8,
+            ]);
+          });
         }
       placeFame(7);
       break;
