@@ -211,17 +211,22 @@ function setup() {
         rotation: new Rotator(0, (i * 360) / positions.length + 180, 0),
         scale: 0.2,
         widget: render(
-          <button
-            size={48}
-            font="Constantia.ttf"
-            fontPackage={refPackageId}
-            color={p.options[p.index].color}
+          <contentbutton
             onClick={(_, player) =>
               player.switchSlot(boards(positions).indexOf(p))
             }
           >
-            {" Sit "}
-          </button>,
+            <border color={p.options[p.index].color}>
+              <text
+                size={48}
+                font="Constantia.ttf"
+                fontPackage={refPackageId}
+                color={p.options[p.index].color!.foreground()}
+              >
+                {" Sit "}
+              </text>
+            </border>
+          </contentbutton>,
         ),
       }),
     );
