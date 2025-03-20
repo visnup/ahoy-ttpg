@@ -92,9 +92,9 @@ function placeWealthDie(region: Card) {
     region.getPosition().add([0, 0, 1]),
   )!;
   const { pitch, roll } = wealth.getRotation();
-  wealth.setPrimaryColor(
-    colors[Math.floor((region.getCardDetails(0)?.index ?? 0) / 2)],
-  );
+  const color = colors[Math.floor((region.getCardDetails(0)?.index ?? 0) / 2)];
+  wealth.setPrimaryColor(color);
+  wealth.setSecondaryColor(color.contrastingText());
   wealth.setRotation([pitch, region.getRotation().yaw, roll]);
   wealth.snapToGround();
 }

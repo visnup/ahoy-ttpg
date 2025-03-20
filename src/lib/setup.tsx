@@ -221,7 +221,7 @@ function setup() {
                 size={48}
                 font="Constantia.ttf"
                 fontPackage={refPackageId}
-                color={p.options[p.index].color!.foreground()}
+                color={p.options[p.index].color!.contrastingText()}
               >
                 {" Sit "}
               </text>

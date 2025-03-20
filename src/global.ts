@@ -88,10 +88,10 @@ Card.prototype.flip = function () {
 // Extend Color
 declare module "@tabletop-playground/api" {
   interface Color {
-    foreground(): Color;
+    contrastingText(): Color;
   }
 }
-Color.prototype.foreground = function () {
+Color.prototype.contrastingText = function () {
   return 0.299 * this.r + 0.587 * this.g + 0.114 * this.b < 0.5
     ? new Color(1, 1, 1, 1)
     : new Color(0, 0, 0, 1);

@@ -231,7 +231,7 @@ refObject.setup = (slot: number) => {
           .add(y.multiply(dy)),
       ) as Dice;
       dice.setPrimaryColor(color);
-      dice.setSecondaryColor(color.foreground());
+      dice.setSecondaryColor(color.contrastingText());
       dice.setRotation(refObject.getRotation());
       dice.snapToGround();
     }
