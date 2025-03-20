@@ -7,6 +7,13 @@ smuggler white FFFFFF
 leviathan 34A936
 coral cap pirates E88FB8
 
+fish 884D87
+swords FFCC08
+compass EE7E2C
+skull E31F2F
+tree 6CB945
+parrot 0CB6CF
+
 dimensions
 ----------
 die 1.4x1.4x1.4

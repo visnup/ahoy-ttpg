@@ -1,5 +1,6 @@
 import {
   refCard as _refCard,
+  Color,
   GridSnapType,
   ObjectType,
   world,
@@ -68,7 +69,15 @@ function penetrablePieces(penetrable = true) {
   }
 }
 
-function placeWealthDie(region: GameObject) {
+const colors = [
+  new Color(0x88 / 255, 0x4d / 255, 0x87 / 255, 1),
+  new Color(0xff / 255, 0xcc / 255, 0x08 / 255, 1),
+  new Color(0xee / 255, 0x7e / 255, 0x2c / 255, 1),
+  new Color(0xe3 / 255, 0x1f / 255, 0x2f / 255, 1),
+  new Color(0x6c / 255, 0xb9 / 255, 0x45 / 255, 1),
+  new Color(0x0c / 255, 0xb6 / 255, 0xcf / 255, 1),
+];
+function placeWealthDie(region: Card) {
   const hits = world
     .boxTrace(
       region.getPosition(),
@@ -83,6 +92,9 @@ function placeWealthDie(region: GameObject) {
     region.getPosition().add([0, 0, 1]),
   )!;
   const { pitch, roll } = wealth.getRotation();
+  wealth.setPrimaryColor(
+    colors[Math.floor((region.getCardDetails(0)?.index ?? 0) / 2)],
+  );
   wealth.setRotation([pitch, region.getRotation().yaw, roll]);
   wealth.snapToGround();
 }
