@@ -92,7 +92,7 @@ declare module "@tabletop-playground/api" {
   }
 }
 Color.prototype.contrastingText = function () {
-  return 0.299 * this.r + 0.587 * this.g + 0.114 * this.b < 0.5
+  return 0.299 * this.r + 0.587 * this.g + 0.114 * this.b < 0.6
     ? new Color(1, 1, 1, 1)
     : new Color(0, 0, 0, 1);
 };
