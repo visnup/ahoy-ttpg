@@ -197,6 +197,7 @@ refObject.setup = (slot: number) => {
 
   function placeShip(id: string, [dx, dy]: [number, number], n = 1, c = 0) {
     let columns = c || Math.floor(Math.sqrt(n));
+    if (n === 0 || columns === 0) return;
     while (n % columns !== 0) columns--;
     const p0 = p
       .add([0, 0, 2])
