@@ -107,7 +107,8 @@ refObject.setup = (slot: number) => {
       placeReward(black, tile);
       placeReward(black, tile);
       placeShip(player.head, [-9, 14], 4);
-      placeShip(player.body, [15.5, 6], 12);
+      placeShip(player.body, [15.5, 6], 10);
+      placeShip(player.body, [7.7, -6.3], 2, 2);
       placeDice(4, player, 15);
       placeGold(1, 15);
       placeHolder();
@@ -194,8 +195,8 @@ refObject.setup = (slot: number) => {
     }
   }
 
-  function placeShip(id: string, [dx, dy]: [number, number], n = 1) {
-    let columns = Math.floor(Math.sqrt(n));
+  function placeShip(id: string, [dx, dy]: [number, number], n = 1, c = 0) {
+    let columns = c || Math.floor(Math.sqrt(n));
     while (n % columns !== 0) columns--;
     const p0 = p
       .add([0, 0, 2])
