@@ -29,7 +29,7 @@ refObject.onHit.add((ship, other) => {
 });
 
 function circling(piece: GameObject, region: GameObject) {
-  const out = piece.getPosition().subtract(region.getPosition()).unit();
+  const out = region.getPosition().subtract(piece.getPosition()).unit();
   const { pitch, roll } = piece.getRotation();
   return new Rotator(pitch, out.toRotator().yaw, roll);
 }
