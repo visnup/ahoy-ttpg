@@ -255,12 +255,12 @@ refObject.setup = (slot: number) => {
   ) {
     const deck = world.createObjectFromTemplate(
       id,
-      p.add([0, 0, 5]).add(x.multiply(dx)).add(y.multiply(dy)),
+      p.add([0, 0, 1]).add(x.multiply(dx)).add(y.multiply(dy)),
     ) as Card;
     deck.setOwningPlayerSlot(slot);
     deck.setRotation(refObject.getRotation());
-    deck.snapToGround();
     if (flip) deck.flip();
+    deck.snapToGround();
     return deck;
   }
 
