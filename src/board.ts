@@ -53,15 +53,15 @@ refObject.setup = (slot: number) => {
         for (let j = 0; j < 3; j++) {
           const card = j ? deck.takeCards(1)! : deck;
           card.setPosition(deck.getPosition().add(y.multiply(-j * 8)));
-          const suit = card
-            .getCardDetails(0)!
-            .metadata.trim() as keyof typeof player.frigates;
-          process.nextTick(() => {
+          setTimeout(() => {
+            const suit = card
+              .getCardDetails(0)!
+              .metadata.trim() as keyof typeof player.frigates;
             placeShip(player.frigates[suit], [
               (deck === left ? -19 : 19) + 4.7,
               11.2 - j * 8,
             ]);
-          });
+          }, 500);
         }
       placeFame(7);
       break;
