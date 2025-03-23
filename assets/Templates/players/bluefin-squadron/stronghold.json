@@ -50,7 +50,7 @@
 				"Z": 0
 			},
 			"Texture": "players/bluefin-squadron/stronghold.png",
-			"NormalMap": "",
+			"NormalMap": "players/SandyWood_N.jpg",
 			"ExtraMap": "Texture2D'/Game/Textures/T_BlackMap.T_BlackMap'",
 			"ExtraMap2": "",
 			"IsTransparent": false,
