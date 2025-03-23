@@ -3,7 +3,7 @@
 	"GUID": "7F42FD5287AA96FA6F216F1186DE8CEB",
 	"Name": "flagship",
 	"Metadata": "shellfire-rebellion",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

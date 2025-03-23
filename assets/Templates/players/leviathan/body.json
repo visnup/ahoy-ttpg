@@ -3,7 +3,7 @@
 	"GUID": "6D11CDACC44B568CB98AFAAA9361831E",
 	"Name": "body",
 	"Metadata": "",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

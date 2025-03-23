@@ -3,7 +3,7 @@
 	"GUID": "D1FCC096FA45847655DE3B80A7EBDE39",
 	"Name": "flagship",
 	"Metadata": "smuggler-red",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

@@ -3,7 +3,7 @@
 	"GUID": "C29AA2CEE9443EC6BB65048280A4DBB1",
 	"Name": "veteran-patrol",
 	"Metadata": "",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

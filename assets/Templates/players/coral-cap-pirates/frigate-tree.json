@@ -3,7 +3,7 @@
 	"GUID": "04E3BE7716423C6912D2E2991321C7E9",
 	"Name": "frigate",
 	"Metadata": "tree",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

@@ -1,5 +1,6 @@
 import {
   refObject as _refObject,
+  ObjectType,
   Rotator,
   Vector,
   world,
@@ -9,24 +10,33 @@ import {
 
 const refObject = _refObject;
 
-refObject.onHit.add((ship, other) => {
-  if (
-    ship.getOwningPlayerSlot() === 0 &&
-    other &&
-    other.getTemplateName() === "region" &&
-    !ship.getSavedData("setup")
-  ) {
-    setupBlue(ship, other);
-    setupYellow(
-      world
-        .getObjectsByTemplateName<Card>("region")
-        .find(
-          (o) => o !== other && o.getStackSize() === 1 && world.isOnTable(o),
-        )!,
-    );
-    ship.setSavedData(other.getId(), "setup");
-  }
-});
+if (
+  ["blackfish-brigade", "bluefin-squadron"].includes(
+    refObject.getTemplateMetadata(),
+  )
+) {
+  const objectType = refObject.getObjectType();
+  refObject.setObjectType(ObjectType.Regular);
+  refObject.onHit.add((ship, other) => {
+    if (
+      ship.getOwningPlayerSlot() === 0 &&
+      other &&
+      other.getTemplateName() === "region" &&
+      !ship.getSavedData("setup")
+    ) {
+      setupBlue(ship, other);
+      setupYellow(
+        world
+          .getObjectsByTemplateName<Card>("region")
+          .find(
+            (o) => o !== other && o.getStackSize() === 1 && world.isOnTable(o),
+          )!,
+      );
+      ship.setObjectType(objectType);
+      ship.setSavedData(other.getId(), "setup");
+    }
+  });
+}
 
 function circling(piece: GameObject, region: GameObject) {
   const out = region.getPosition().subtract(piece.getPosition()).unit();

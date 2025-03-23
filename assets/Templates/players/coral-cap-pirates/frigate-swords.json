@@ -3,7 +3,7 @@
 	"GUID": "10D38ADCB747ECFD403C1C8968F04228",
 	"Name": "frigate",
 	"Metadata": "swords",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

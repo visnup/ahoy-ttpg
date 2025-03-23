@@ -3,7 +3,7 @@
 	"GUID": "78D52E3FB74714A7F5701CB23397EBAA",
 	"Name": "flagship",
 	"Metadata": "coral-cap-pirates",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

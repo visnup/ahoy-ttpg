@@ -3,7 +3,7 @@
 	"GUID": "8D635EA1AD49A3F819190E819BDA4506",
 	"Name": "flagship",
 	"Metadata": "blackfish-brigade",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,
@@ -39,9 +39,9 @@
 			},
 			"Scale":
 			{
-				"X": 3.6,
-				"Y": 3.4,
-				"Z": 0.97
+				"X": 3.6000000000000001,
+				"Y": 3.3999999999999999,
+				"Z": 0.96999999999999997
 			},
 			"Rotation":
 			{

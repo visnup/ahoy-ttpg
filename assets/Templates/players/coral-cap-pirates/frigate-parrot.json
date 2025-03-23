@@ -3,7 +3,7 @@
 	"GUID": "C81158034445B4AD2DC786AAA8A3BF26",
 	"Name": "frigate",
 	"Metadata": "parrot",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

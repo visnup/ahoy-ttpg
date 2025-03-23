@@ -3,7 +3,7 @@
 	"GUID": "C31FE232614EE2EC6C993698D2D75000",
 	"Name": "patrol",
 	"Metadata": "",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

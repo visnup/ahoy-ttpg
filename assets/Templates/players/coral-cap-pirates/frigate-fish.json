@@ -3,7 +3,7 @@
 	"GUID": "93A4C319AE4704EE82831792FF0DDA09",
 	"Name": "frigate",
 	"Metadata": "fish",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

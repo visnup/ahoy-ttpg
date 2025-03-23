@@ -3,7 +3,7 @@
 	"GUID": "ED42917F6B49EFC0115F0AB93E6D84A5",
 	"Name": "cutter",
 	"Metadata": "",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

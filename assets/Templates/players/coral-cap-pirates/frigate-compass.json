@@ -3,7 +3,7 @@
 	"GUID": "565D1F6A684C9C55D0D1F381C6F52140",
 	"Name": "frigate",
 	"Metadata": "compass",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.3,
 	"Density": 1,

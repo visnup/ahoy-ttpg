@@ -3,7 +3,7 @@
 	"GUID": "631F8E03FB488C23D1AC3C8270C61C8F",
 	"Name": "flagship",
 	"Metadata": "bluefin-squadron",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0.33,
 	"Density": 1,

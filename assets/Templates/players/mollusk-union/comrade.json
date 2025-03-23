@@ -3,7 +3,7 @@
 	"GUID": "2B35CBA5134BD90265F177B9637AC524",
 	"Name": "comrade",
 	"Metadata": "",
-	"CollisionType": "Regular",
+	"CollisionType": "Penetrable",
 	"Friction": 0.7,
 	"Restitution": 0,
 	"Density": 0.5,
