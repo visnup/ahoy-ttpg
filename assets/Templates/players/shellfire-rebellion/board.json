@@ -42,7 +42,8 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action"
+				"action",
+				"damage"
 			]
 		},
 		{
@@ -55,7 +56,8 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action"
+				"action",
+				"damage"
 			]
 		},
 		{
@@ -68,7 +70,8 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action"
+				"action",
+				"damage"
 			]
 		},
 		{
@@ -81,7 +84,8 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action"
+				"action",
+				"damage"
 			]
 		},
 		{
@@ -94,7 +98,8 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action"
+				"action",
+				"damage"
 			]
 		},
 		{
@@ -107,7 +112,8 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action"
+				"action",
+				"damage"
 			]
 		},
 		{
@@ -120,7 +126,8 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action"
+				"action",
+				"damage"
 			]
 		},
 		{
@@ -133,7 +140,8 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action"
+				"action",
+				"damage"
 			]
 		},
 		{
@@ -144,7 +152,11 @@
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
-			"FlipValidity": 0
+			"FlipValidity": 0,
+			"Tags": [
+				"action",
+				"damage"
+			]
 		},
 		{
 			"X": -2.3999999999999999,
@@ -156,7 +168,8 @@
 			"Shape": 0,
 			"FlipValidity": 0,
 			"Tags": [
-				"action"
+				"action",
+				"damage"
 			]
 		},
 		{
@@ -167,7 +180,10 @@
 			"SnapRotation": 0,
 			"RotationOffset": 0,
 			"Shape": 0,
-			"FlipValidity": 0
+			"FlipValidity": 0,
+			"Tags": [
+				"action"
+			]
 		},
 		{
 			"X": -5.6799999999999997,
