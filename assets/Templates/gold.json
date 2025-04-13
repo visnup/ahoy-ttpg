@@ -43,7 +43,7 @@
 	"FrontTexture": "gold.png",
 	"BackTexture": "",
 	"HiddenTexture": "",
-	"BackIndex": 0,
+	"BackIndex": -1,
 	"HiddenIndex": -1,
 	"NumHorizontal": 1,
 	"NumVertical": 1,
