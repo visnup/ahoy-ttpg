@@ -54,10 +54,10 @@ function getRadialPosition(i: number, dr = 19) {
 
 globalEvents.onPlayerSwitchedSlots.add((player: Player) => {
   const board = boards(positions)[player.getSlot()].board!;
-  const p = Vector.lerp(origin, board.getPosition(), 2).add([0, 0, 50]);
+  const p = Vector.lerp(origin, board.getPosition(), 1.4).add([0, 0, 60]);
   player.setPositionAndRotation(
     p,
-    p.findLookAtRotation(Vector.lerp(origin, board.getPosition(), 0.5)),
+    p.findLookAtRotation(Vector.lerp(origin, board.getPosition(), 0.6)),
   );
 });
 
